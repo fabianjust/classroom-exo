@@ -1,0 +1,1859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Mohammed Al-Tashi\Desktop\EXO V2\PCB_Designs\EDUEXO-custom-PCB\EDUEXO-custom-PCB.kicad_sch</source>
+    <date>5/17/2023 8:34:38 PM</date>
+    <tool>Eeschema (6.0.5)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>EDUEXO custom PCB</title>
+        <company>CBPR</company>
+        <rev>V1</rev>
+        <date>2023-03-28</date>
+        <source>EDUEXO-custom-PCB.kicad_sch</source>
+        <comment number="1" value="Mohammed Al-Tashi"/>
+        <comment number="2" value="&lt;mohammedaltashi770@gmail.com&gt;"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/">
+      <title_block>
+        <title>Nano 33 IOT</title>
+        <company/>
+        <rev/>
+        <date/>
+        <source>nano-33-iot.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ina125p_amplifier.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/SERVO S0650/" tstamps="/4053fc8d-8e15-40a4-82f6-1f82b08e33fc/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>servo-s0650.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>bq25886-batterymanagment.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="H1">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>da135e29-3ea1-40c4-b51f-701a88ad6b8d</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>314622a7-fbf2-41fe-8f89-e1ce59e719a3</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d2cf4cf-6dc4-49e3-85b7-7f16daeac635</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>M3</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e980ce8-6bce-4d8b-99ea-7cfd55ef65d1</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>EMG0</value>
+      <footprint>EDUEXO-custom-PCB:TE_1-2834011-3</footprint>
+      <datasheet>https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=1-1773872-7_ModularScrewlessTerminalBloc&amp;DocType=DS&amp;DocLang=English</datasheet>
+      <fields>
+        <field name="MPN">1-2834011-3</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="1-2834011-3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>761fc7da-594d-4687-a533-5016565a9e04</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>EMG1</value>
+      <footprint>EDUEXO-custom-PCB:TE_1-2834011-3</footprint>
+      <datasheet>https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=1-1773872-7_ModularScrewlessTerminalBloc&amp;DocType=DS&amp;DocLang=English</datasheet>
+      <fields>
+        <field name="MPN">1-2834011-3</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="1-2834011-3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2ea8357a-c9de-449a-8860-96d767ac1434</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>SG0</value>
+      <footprint>EDUEXO-custom-PCB:TE_1-2834011-4</footprint>
+      <datasheet>https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=1-1773872-7_ModularScrewlessTerminalBloc&amp;DocType=DS&amp;DocLang=English</datasheet>
+      <fields>
+        <field name="MPN">1-2834011-4</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x04" description="Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="1-2834011-4"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dcf5d081-db37-49c1-82d9-aea51b587f18</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>SRV0</value>
+      <footprint>EDUEXO-custom-PCB:TE_1-2834011-4</footprint>
+      <datasheet>https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=2834011&amp;DocType=Customer+Drawing&amp;DocLang=English</datasheet>
+      <fields>
+        <field name="MPN">1-2834011-4</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x04" description="Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="1-2834011-4"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>add2ffd5-43f5-4b14-934d-a6dce1a29128</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>BAT0</value>
+      <footprint>EDUEXO-custom-PCB:TE_1-2834011-2</footprint>
+      <datasheet>https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=2834011&amp;DocType=Customer+Drawing&amp;DocLang=English</datasheet>
+      <fields>
+        <field name="MPN">1-2834011-2</field>
+      </fields>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="1-2834011-2"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="EDUEXO-custom-PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bac9d122-1d63-4eae-8919-c755e609c2a9</tstamps>
+    </comp>
+    <comp ref="A1">
+      <value>Arduino_Nano_33_IOT</value>
+      <footprint>EDUEXO-custom-PCB:MODULE_ABX00027_ThroughHoles</footprint>
+      <datasheet>https://docs.arduino.cc/resources/datasheets/ABX00027-datasheet.pdf</datasheet>
+      <libsource lib="EDUEXO-custom-PCB" part="Arduino_Nano_33_IOT" description="The Arduino Nano 33 IoT and Arduino Nano 33 IoT with headers are a miniature sized module containing a Cortex M0+ SAMD21"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>07d781ce-426f-43d1-8b04-16cda2e64711</tstamps>
+    </comp>
+    <comp ref="ANGLE_SRV0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>da7ac4c9-72ce-49cb-b661-a7992c6d717b</tstamps>
+    </comp>
+    <comp ref="ARDu_CONTROL_SRV0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>208d0eb2-3bc3-41e2-89eb-c0cee92c14de</tstamps>
+    </comp>
+    <comp ref="BAT_VALUE_0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>7e1d1d7a-cc93-4cef-a2e2-23bff27a0c44</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>6.8uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X8L0J685K125AC</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X8L0J685K125AC"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>de30c013-2751-4791-ba66-b03359a1b2f2</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R2A104K125AA</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R2A104K125AA"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>3983e7b1-c75e-4a43-957e-fdf65b73b660</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R2A104K125AA</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R2A104K125AA"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>19c1ed24-b6f3-4d1f-af39-7565b8b0c384</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1H105K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1H105K125AB"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>5b715f6a-7dde-4b79-bc85-adcfe85270dd</tstamps>
+    </comp>
+    <comp ref="C17">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R2A104K125AA</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R2A104K125AA"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>aad3fa0c-dcc2-4508-be36-8d2a95ce9dce</tstamps>
+    </comp>
+    <comp ref="C18">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1H105K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1H105K125AB"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>a714b9df-ed16-49ab-9223-e34a4bc69565</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>BAT60B</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://www.infineon.com/dgdl/bat60bseries.pdf?folderId=db3a304313d846880113def5812204a1&amp;fileId=db3a304314dca3890115195908c50f0b</datasheet>
+      <fields>
+        <field name="MPN">BAT60BE6327HTSA1</field>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="MPN" value="BAT60BE6327HTSA1"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>d54e6cf5-09fe-49f5-8dbc-2f1c8a902139</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>D1213A</value>
+      <footprint>Diode_SMD:D_SOD-323</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/D1213A-01WS.pdf</datasheet>
+      <fields>
+        <field name="MPN">D1213A-01WS-7</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <property name="MPN" value="D1213A-01WS-7"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>a50f5819-403e-4537-8bcb-ccc83d46da15</tstamps>
+    </comp>
+    <comp ref="DRIVE_PWM_SRV0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>e3c613bb-9871-47b1-9c96-6b43f503d8f5</tstamps>
+    </comp>
+    <comp ref="EMG0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>c7ab9131-ad64-4052-b108-5ebbfc466fef</tstamps>
+    </comp>
+    <comp ref="EMG1">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>1f9c6bdd-27e6-4b5a-b0a9-9897b520779d</tstamps>
+    </comp>
+    <comp ref="GND1">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>dd2839c4-2239-4dd9-85b1-ca941ddbb51f</tstamps>
+    </comp>
+    <comp ref="OUTPUT_SG0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>63bc3ffb-a62e-4b60-aae6-3743848c5d28</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805JR-0710KL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805JR-0710KL"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>2e46347c-4142-4ccc-86a2-8545486dc118</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805JR-0710KL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805JR-0710KL"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>8793959d-7706-4583-a445-b07c9122f190</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805JR-0710KL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805JR-0710KL"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>d4d502e9-88b9-4f57-a28e-3b02a01466bf</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>LP11EE1NCSRGB</value>
+      <footprint>EDUEXO-custom-PCB:SW_LP11EE1NCSRGB</footprint>
+      <datasheet>https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/38/LP11.pdf</datasheet>
+      <libsource lib="EDUEXO-custom-PCB" part="LP11EE1NCSRGB" description="1.2MHz White LED Drivers with Built-in Schottky, ThinSOT-23-6"/>
+      <property name="Sheetname" value="Nano 33 IOT "/>
+      <property name="Sheetfile" value="nano-33-iot.kicad_sch"/>
+      <sheetpath names="/Nano 33 IOT /" tstamps="/6b8e720e-f5d4-4fba-a336-7804428b269d/"/>
+      <tstamps>7a4c7279-83f4-4d1e-9552-df37d29f0b22</tstamps>
+    </comp>
+    <comp ref="+3V3">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>d77e4f19-a961-49e4-a544-966d3804e9c8</tstamps>
+    </comp>
+    <comp ref="+5V0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>0c202822-edfa-4e71-8c1e-41f23ad8cb15</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R2A104K125AA</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R2A104K125AA"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>8d14c3a4-c93b-4bf2-a23c-8db8a4f1aff7</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1H105K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1H105K125AB"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>da6204d2-ab51-400d-9246-b0074e53d250</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R2A104K125AA</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R2A104K125AA"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>dd94f59e-0f49-4de6-a21a-c9dcb4f6bc72</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1H105K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1H105K125AB"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>55a638d5-e984-4208-aad6-1457b794685a</tstamps>
+    </comp>
+    <comp ref="GND3">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>052b9a1f-de21-4001-8907-dfcc6a191553</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>60.4R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-0760R4L</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-0760R4L"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>9bbfeabf-8461-4579-a374-87975b88d24d</tstamps>
+    </comp>
+    <comp ref="SG0_SGN0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>4e3810b1-c25b-471b-9f9e-e07d7bdb8066</tstamps>
+    </comp>
+    <comp ref="SG0_SGN1">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>1d7525e1-d563-413e-a3fa-e259f33a598c</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>INA125P</value>
+      <footprint>DIP794W45P254L1969H508Q16</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/ina125.pdf</datasheet>
+      <libsource lib="EDUEXO-custom-PCB" part="INA125P" description=""/>
+      <property name="Sheetname" value="INA125P AMPLIFIER"/>
+      <property name="Sheetfile" value="ina125p_amplifier.kicad_sch"/>
+      <sheetpath names="/INA125P AMPLIFIER/" tstamps="/8171721f-9882-443a-8712-43ae85c40ad9/"/>
+      <tstamps>0d13c93b-2854-4484-b774-62facd9bdd66</tstamps>
+    </comp>
+    <comp ref="POWER_SRV0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="SERVO S0650"/>
+      <property name="Sheetfile" value="servo-s0650.kicad_sch"/>
+      <sheetpath names="/SERVO S0650/" tstamps="/4053fc8d-8e15-40a4-82f6-1f82b08e33fc/"/>
+      <tstamps>c398c3e3-c72e-45cc-a857-73d8db6885b4</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>BSS123</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/assets/Datasheets/ds30366.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BSS123" description="0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value="SERVO S0650"/>
+      <property name="Sheetfile" value="servo-s0650.kicad_sch"/>
+      <sheetpath names="/SERVO S0650/" tstamps="/4053fc8d-8e15-40a4-82f6-1f82b08e33fc/"/>
+      <tstamps>7cd4cfe9-00a1-4444-a900-0e3e513de943</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>Si3483CDV</value>
+      <footprint>Package_TO_SOT_SMD:TSOT-23-6</footprint>
+      <datasheet>https://www.vishay.com/docs/68603/si3483cd.pdf</datasheet>
+      <libsource lib="EDUEXO-custom-PCB" part="Si3483CDV" description="30V Vds, 6.3A Id, N-Channel MOSFET, TSOP-6"/>
+      <property name="Sheetname" value="SERVO S0650"/>
+      <property name="Sheetfile" value="servo-s0650.kicad_sch"/>
+      <sheetpath names="/SERVO S0650/" tstamps="/4053fc8d-8e15-40a4-82f6-1f82b08e33fc/"/>
+      <tstamps>cd01ca8b-a55a-442a-98f7-0c6b625485bd</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-13100KL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-13100KL"/>
+      <property name="Sheetname" value="SERVO S0650"/>
+      <property name="Sheetfile" value="servo-s0650.kicad_sch"/>
+      <sheetpath names="/SERVO S0650/" tstamps="/4053fc8d-8e15-40a4-82f6-1f82b08e33fc/"/>
+      <tstamps>9d5fbfb5-468d-4aae-a151-28510f11850d</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-13100KL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-13100KL"/>
+      <property name="Sheetname" value="SERVO S0650"/>
+      <property name="Sheetfile" value="servo-s0650.kicad_sch"/>
+      <sheetpath names="/SERVO S0650/" tstamps="/4053fc8d-8e15-40a4-82f6-1f82b08e33fc/"/>
+      <tstamps>9053eae3-d69e-47e6-a173-801240c950d5</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_midvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7R1H105K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1H105K125AB"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>3b7d0781-2496-48e9-ace8-63be5ce4c270</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X5R1E106K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X5R1E106K125AB"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>59ee93a1-5803-4797-b912-5ce6d941dd81</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>47nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/system/files?file=dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_highvoltage_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X7T2W473K125AA</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7T2W473K125AA"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>e1de0f0f-57b7-41ae-9b6c-4456199cd858</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X5R1E475K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X5R1E475K125AB"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>d06aa242-61a0-4210-94de-88a1eff7ca46</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X5R1E106K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X5R1E106K125AB"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>b3c90873-2b92-4a76-9f40-fdd6983db51c</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X5R1V226M125AC</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X5R1V226M125AC"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>1475fcba-37f6-4a6f-af69-e4e75c31f5bb</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X5R1V226M125AC</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X5R1V226M125AC"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>37032dce-85fa-4313-bad2-74442ed73820</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/mlcc/catalog/mlcc_commercial_general_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">C2012X5R1E106K125AB</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X5R1E106K125AB"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>d33ddbd0-5013-46bf-8ee2-57ad44843058</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED_Blue</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>https://optoelectronics.liteon.com/upload/download/DS22-2000-230/LTST-C191TBKT.pdf</datasheet>
+      <fields>
+        <field name="MPN">LTST-C191TBKT</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="LTST-C191TBKT"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>0e73aa7f-38f6-4c9d-b231-c45c0c6d7a14</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>LED_RED</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <datasheet>https://optoelectronics.liteon.com/upload/download/DS22-2000-223/LTST-C191KRKT.PDF</datasheet>
+      <fields>
+        <field name="MPN">LTST-C191KRKT</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="MPN" value="LTST-C191KRKT"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>e1f5053a-bb7d-48f3-8266-82f19e6c1939</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>ESD321</value>
+      <footprint>Diode_SMD:D_0402_1005Metric</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/esd321.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&amp;ts=1683194956063&amp;ref_url=https%253A%252F%252Fwww.ti.com%252Fgeneral%252Fdocs%252Fsuppproductinfo.tsp%253FdistId%253D10%2526gotoUrl%253Dhttps%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fesd321</datasheet>
+      <fields>
+        <field name="MPN">ESD321DPYR</field>
+      </fields>
+      <libsource lib="Diode" part="ESD9B3.3ST5G" description="ESD protection diode, 3.3Vrwm, SOD-923"/>
+      <property name="MPN" value="ESD321DPYR"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>a96eb808-5680-477e-85e3-82923a0c4472</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>ESD321</value>
+      <footprint>Diode_SMD:D_0402_1005Metric</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/esd321.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&amp;ts=1683194956063&amp;ref_url=https%253A%252F%252Fwww.ti.com%252Fgeneral%252Fdocs%252Fsuppproductinfo.tsp%253FdistId%253D10%2526gotoUrl%253Dhttps%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Fesd321</datasheet>
+      <fields>
+        <field name="MPN">ESD321DPYR</field>
+      </fields>
+      <libsource lib="Diode" part="ESD9B3.3ST5G" description="ESD protection diode, 3.3Vrwm, SOD-923"/>
+      <property name="MPN" value="ESD321DPYR"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>805734ae-34b5-4a19-9f56-f5cba973bd9f</tstamps>
+    </comp>
+    <comp ref="GND2">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>068cb32e-8d2d-4242-a5e3-d702ed48525d</tstamps>
+    </comp>
+    <comp ref="GND4">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>e4c47f20-e33e-4962-9306-81d9482b5c83</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>USB_B_Micro</value>
+      <footprint>EDUEXO-custom-PCB:USB_micro_B_10118192-0002LF</footprint>
+      <datasheet>https://www.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf</datasheet>
+      <fields>
+        <field name="MPN">10118192-0002LF</field>
+      </fields>
+      <libsource lib="EDUEXO-custom-PCB" part="USB_B_Micro" description="USB Micro Type B connector"/>
+      <property name="MPN" value="10118192-0002LF"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>923077d3-3231-4f18-aa99-16a563f2bdd1</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>1uH</value>
+      <footprint>EDUEXO-custom-PCB:L_0630CDMCCDS-1R5MC</footprint>
+      <datasheet>https://products.sumida.com/products/pdf/0630CDMCCDS.pdf?t=1611592302</datasheet>
+      <fields>
+        <field name="MPN">0630CDMCCDS-1R5MC</field>
+      </fields>
+      <libsource lib="pspice" part="INDUCTOR" description="Inductor symbol for simulation only"/>
+      <property name="MPN" value="0630CDMCCDS-1R5MC"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>901a2f4c-238b-4d39-8f18-36eb1a4d22c3</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>383R</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-07383RL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-07383RL"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>0feaa34f-3729-4d1d-831d-4d7e66485da9</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>Vset</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="config">dnf</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="config" value="dnf"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>a753a5b2-4cd9-4bfb-9d02-312434ed5c86</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>Iset</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="config">dnf</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="config" value="dnf"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>ae323283-2255-49ac-b825-0c070b9a1099</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>5.24k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-075K23L</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-075K23L"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>649f73f1-9437-45d8-a232-d0e3ff5c127f</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>30.31k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-0730K1L</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Field4" value=""/>
+      <property name="MPN" value="RC0805FR-0730K1L"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>3959492f-a65d-4ea4-be92-0b9bfa6134d3</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>300</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805JR-07300RL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805JR-07300RL"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>99c387a9-b06d-4810-8503-6f947df92a85</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>170</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</datasheet>
+      <fields>
+        <field name="MPN">RC0805FR-07174RL</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="MPN" value="RC0805FR-07174RL"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>0727576a-e8f3-4e32-9f5b-a3be889be922</tstamps>
+    </comp>
+    <comp ref="TH1">
+      <value>Thermistor_NTC</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="config">dnf</field>
+      </fields>
+      <libsource lib="Device" part="Thermistor_NTC" description="Temperature dependent resistor, negative temperature coefficient"/>
+      <property name="config" value="dnf"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>a690d22f-6f95-40f2-89aa-ca6874c1412a</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>BQ25886RGER</value>
+      <footprint>EDUEXO-custom-PCB:Texas_S-PVQFN-N24_EP2.1x2.1mm_ThermalVias</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/bq25886.pdf?ts=1681211335919&amp;ref_url=https%253A%252F%252Fwww.google.com%252F</datasheet>
+      <libsource lib="EDUEXO-custom-PCB" part="BQ25886RGER" description=""/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>daeb0ee1-daef-429b-a07c-300e3bd1cd74</tstamps>
+    </comp>
+    <comp ref="VBUS0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>ab819c38-b6eb-4035-8307-99ff7e08325a</tstamps>
+    </comp>
+    <comp ref="VDC0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>7a144779-ce8a-4b79-9bb0-e1ec66c3d0e3</tstamps>
+    </comp>
+    <comp ref="VREGN0">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Keystone_5000-5004_Miniature</footprint>
+      <datasheet>https://www.keyelco.com/userAssets/file/M65p56.pdf</datasheet>
+      <fields>
+        <field name="MPN">5002</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="MPN" value="5002"/>
+      <property name="Sheetname" value="BQ25886 BATTERY MANAGMENT"/>
+      <property name="Sheetfile" value="bq25886-batterymanagment.kicad_sch"/>
+      <sheetpath names="/BQ25886 BATTERY MANAGMENT/" tstamps="/0839c1cc-3bd8-4fa7-8a2e-6b3a656fa6e7/"/>
+      <tstamps>ef799fc7-4f6e-4ea7-ab66-aadb96f72abd</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Screw_Terminal_01x02">
+      <description>Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x03">
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x04">
+      <description>Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener">
+      <description>Zener diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Thermistor_NTC">
+      <description>Temperature dependent resistor, negative temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*NTC*</fp>
+        <fp>*Thermistor*</fp>
+        <fp>PIN?ARRAY*</fp>
+        <fp>bornier*</fp>
+        <fp>*Terminal?Block*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TH</field>
+        <field name="Value">Thermistor_NTC</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="ESD9B3.3ST5G">
+      <description>ESD protection diode, 3.3Vrwm, SOD-923</description>
+      <docs>https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF</docs>
+      <footprints>
+        <fp>D*SOD?923*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ESD9B3.3ST5G</field>
+        <field name="Footprint">Diode_SMD:D_SOD-923</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EDUEXO-custom-PCB" part="Arduino_Nano_33_IOT">
+      <description>The Arduino Nano 33 IoT and Arduino Nano 33 IoT with headers are a miniature sized module containing a Cortex M0+ SAMD21</description>
+      <docs>https://docs.arduino.cc/resources/datasheets/ABX00027-datasheet.pdf</docs>
+      <footprints>
+        <fp>Arduino*Nano*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A1</field>
+        <field name="Value">Arduino_Nano_33_IOT</field>
+        <field name="Footprint">EDUEXO-custom-PCB:MODULE_ABX00027_ThroughHoles</field>
+        <field name="Datasheet">https://docs.arduino.cc/resources/datasheets/ABX00027-datasheet.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D13" type="bidirectional"/>
+        <pin num="2" name="+3V3" type="power_out"/>
+        <pin num="3" name="AREF" type="bidirectional"/>
+        <pin num="4" name="A0/DAC0" type="bidirectional"/>
+        <pin num="5" name="A1" type="bidirectional"/>
+        <pin num="6" name="A2" type="bidirectional"/>
+        <pin num="7" name="A3" type="bidirectional"/>
+        <pin num="8" name="A4/SDA" type="bidirectional"/>
+        <pin num="9" name="A5/SCL" type="bidirectional"/>
+        <pin num="10" name="A6" type="bidirectional"/>
+        <pin num="11" name="A7" type="bidirectional"/>
+        <pin num="12" name="VUSB" type="power_out"/>
+        <pin num="13" name="RST" type="input"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="VIN" type="power_in"/>
+        <pin num="16" name="TX" type="bidirectional"/>
+        <pin num="17" name="RX" type="bidirectional"/>
+        <pin num="18" name="RST" type="bidirectional"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="D2" type="bidirectional"/>
+        <pin num="21" name="D3/PWM" type="bidirectional"/>
+        <pin num="22" name="D4" type="bidirectional"/>
+        <pin num="23" name="D5/PWM" type="bidirectional"/>
+        <pin num="24" name="D6/PWM" type="bidirectional"/>
+        <pin num="25" name="D7" type="bidirectional"/>
+        <pin num="26" name="D8" type="bidirectional"/>
+        <pin num="27" name="D9/PWM" type="bidirectional"/>
+        <pin num="28" name="D10/PWM" type="bidirectional"/>
+        <pin num="29" name="D11/MOSI_" type="bidirectional"/>
+        <pin num="30" name="D12/MISO" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="EDUEXO-custom-PCB" part="BQ25886RGER">
+      <docs>https://www.ti.com/lit/ds/symlink/bq25886.pdf?ts=1681211335919&amp;ref_url=https%253A%252F%252Fwww.google.com%252F</docs>
+      <fields>
+        <field name="Reference">U2</field>
+        <field name="Value">BQ25886RGER</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/bq25886.pdf?ts=1681211335919&amp;ref_url=https%253A%252F%252Fwww.google.com%252F</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D-" type="bidirectional"/>
+        <pin num="2" name="STAT" type="open_collector"/>
+        <pin num="3" name="CE" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="OTG" type="input"/>
+        <pin num="6" name="VSET" type="bidirectional"/>
+        <pin num="7" name="TS" type="bidirectional"/>
+        <pin num="8" name="ILIM" type="bidirectional"/>
+        <pin num="9" name="PG" type="open_collector"/>
+        <pin num="10" name="ICHGSET" type="bidirectional"/>
+        <pin num="11" name="REGN" type="power_out"/>
+        <pin num="12" name="BTST" type="bidirectional"/>
+        <pin num="13" name="BAT" type="bidirectional"/>
+        <pin num="14" name="BAT" type="bidirectional"/>
+        <pin num="15" name="SYS" type="power_out"/>
+        <pin num="16" name="SYS" type="passive"/>
+        <pin num="17" name="SW" type="bidirectional"/>
+        <pin num="18" name="SW" type="bidirectional"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="20" name="GND" type="power_in"/>
+        <pin num="21" name="PMID" type="bidirectional"/>
+        <pin num="22" name="PMID" type="bidirectional"/>
+        <pin num="23" name="VBUS" type="power_in"/>
+        <pin num="24" name="D+" type="bidirectional"/>
+        <pin num="25" name="PAD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EDUEXO-custom-PCB" part="INA125P">
+      <docs>https://www.ti.com/lit/ds/symlink/ina125.pdf</docs>
+      <fields>
+        <field name="Reference">U?</field>
+        <field name="Value">INA125P</field>
+        <field name="Footprint">DIP794W45P254L1969H508Q16</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/ina125.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="V+" type="power_in"/>
+        <pin num="2" name="~{SLEEP}" type="input"/>
+        <pin num="3" name="V-" type="power_in"/>
+        <pin num="4" name="VREFOUT" type="power_out"/>
+        <pin num="5" name="IAREF" type="input"/>
+        <pin num="6" name="V+IN" type="input"/>
+        <pin num="7" name="V-IN" type="input"/>
+        <pin num="8" name="RG" type="passive"/>
+        <pin num="9" name="RG" type="passive"/>
+        <pin num="10" name="VO" type="output"/>
+        <pin num="11" name="SENSE" type="input"/>
+        <pin num="12" name="VREFCOM" type="power_in"/>
+        <pin num="13" name="VREFBG" type="bidirectional"/>
+        <pin num="14" name="VREF2.5" type="passive"/>
+        <pin num="15" name="VREF5" type="passive"/>
+        <pin num="16" name="VREF10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EDUEXO-custom-PCB" part="LP11EE1NCSRGB">
+      <description>1.2MHz White LED Drivers with Built-in Schottky, ThinSOT-23-6</description>
+      <docs>https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/38/LP11.pdf</docs>
+      <footprints>
+        <fp>TSOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U3</field>
+        <field name="Value">LP11EE1NCSRGB</field>
+        <field name="Footprint">EDUEXO-custom-PCB:SW_LP11EE1NCSRGB</field>
+        <field name="Datasheet">https://sten-eswitch-13110800-production.s3.amazonaws.com/system/asset/product_line/data_sheet/38/LP11.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="R1" type="passive"/>
+        <pin num="4" name="G1" type="passive"/>
+        <pin num="5" name="B1" type="passive"/>
+        <pin num="6" name="C1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EDUEXO-custom-PCB" part="Si3483CDV">
+      <description>30V Vds, 6.3A Id, N-Channel MOSFET, TSOP-6</description>
+      <docs>https://www.vishay.com/docs/69075/si3456ddv.pdf</docs>
+      <footprints>
+        <fp>TSOP*1.65x3.05mm*P0.95mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Si3483CDV</field>
+        <field name="Footprint">Package_SO:TSOP-6_1.65x3.05mm_P0.95mm</field>
+        <field name="Datasheet">https://www.vishay.com/docs/69075/si3456ddv.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D" type="passive"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="G" type="input"/>
+        <pin num="4" name="S" type="passive"/>
+        <pin num="5" name="D" type="passive"/>
+        <pin num="6" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EDUEXO-custom-PCB" part="USB_B_Micro">
+      <description>USB Micro Type B connector</description>
+      <docs>https://www.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf</docs>
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J5</field>
+        <field name="Value">USB_B_Micro</field>
+        <field name="Footprint">EDUEXO-custom-PCB:USB_micro_B_10118192-0002LF</field>
+        <field name="Datasheet">https://www.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf</field>
+        <field name="MPN">10118192-0002LF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="bidirectional"/>
+        <pin num="3" name="D+" type="bidirectional"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_out"/>
+        <pin num="S1" name="Shield" type="passive"/>
+        <pin num="S2" name="Shield" type="passive"/>
+        <pin num="S3" name="Shield" type="passive"/>
+        <pin num="S4" name="Shield" type="passive"/>
+        <pin num="S5" name="Shield" type="passive"/>
+        <pin num="S6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="Transistor_FET" part="BSS123">
+      <description>0.17A Id, 100V Vds, N-Channel MOSFET, SOT-23</description>
+      <docs>http://www.diodes.com/assets/Datasheets/ds30366.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS123</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.diodes.com/assets/Datasheets/ds30366.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pspice" part="INDUCTOR">
+      <description>Inductor symbol for simulation only</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="EDUEXO-custom-PCB">
+      <uri>C:\Users\Mohammed Al-Tashi\Desktop\EXO V2\PCB_Designs\EDUEXO-custom-PCB/EDUEXO-custom-PCB.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Transistor_FET.kicad_sym</uri>
+    </library>
+    <library logical="pspice">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/pspice.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="+3V3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="A1" pin="2" pinfunction="+3V3" pintype="power_out"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="V+" pintype="power_in"/>
+      <node ref="U1" pin="2" pinfunction="~{SLEEP}" pintype="input"/>
+      <node ref="U3" pin="6" pinfunction="C1" pintype="passive"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="+5V0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="VREF5" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="VREFOUT" pintype="power_out"/>
+    </net>
+    <net code="3" name="/BAT0_INPUT">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="BAT" pintype="bidirectional"/>
+      <node ref="U2" pin="14" pinfunction="BAT" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/BQ25886 BATTERY MANAGMENT/D+">
+      <node ref="D5" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="D+" pintype="bidirectional"/>
+      <node ref="U2" pin="24" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/BQ25886 BATTERY MANAGMENT/D-">
+      <node ref="D6" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="D-" pintype="bidirectional"/>
+      <node ref="U2" pin="1" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/EMG0_V">
+      <node ref="A1" pin="5" pinfunction="A1" pintype="bidirectional"/>
+      <node ref="EMG0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="7" name="/EMG1_V">
+      <node ref="A1" pin="6" pinfunction="A2" pintype="bidirectional"/>
+      <node ref="EMG1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="8" name="/INA125P AMPLIFIER/SG0_OUTPUT_V">
+      <node ref="A1" pin="4" pinfunction="A0/DAC0" pintype="bidirectional"/>
+      <node ref="OUTPUT_SG0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="VO" pintype="output"/>
+      <node ref="U1" pin="11" pinfunction="SENSE" pintype="input"/>
+    </net>
+    <net code="9" name="/Nano 33 IOT /BAT_VALUE_V">
+      <node ref="A1" pin="10" pinfunction="A6" pintype="bidirectional"/>
+      <node ref="BAT_VALUE_0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="10" name="/Nano 33 IOT /SRV0_ARDu_CONTROL_V">
+      <node ref="A1" pin="20" pinfunction="D2" pintype="bidirectional"/>
+      <node ref="ARDu_CONTROL_SRV0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="11" name="/Nano 33 IOT /STATUS_LED_B">
+      <node ref="A1" pin="21" pinfunction="D3/PWM" pintype="bidirectional"/>
+      <node ref="U3" pin="5" pinfunction="B1" pintype="passive"/>
+    </net>
+    <net code="12" name="/Nano 33 IOT /STATUS_LED_G">
+      <node ref="A1" pin="24" pinfunction="D6/PWM" pintype="bidirectional"/>
+      <node ref="U3" pin="4" pinfunction="G1" pintype="passive"/>
+    </net>
+    <net code="13" name="/Nano 33 IOT /STATUS_LED_R">
+      <node ref="A1" pin="27" pinfunction="D9/PWM" pintype="bidirectional"/>
+      <node ref="U3" pin="3" pinfunction="R1" pintype="passive"/>
+    </net>
+    <net code="14" name="/SG0_SIGNAL0_V">
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="SG0_SGN0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="V+IN" pintype="input"/>
+    </net>
+    <net code="15" name="/SG0_SIGNAL1_V">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="SG0_SGN1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="V-IN" pintype="input"/>
+    </net>
+    <net code="16" name="/SRV0_ANGLE_V">
+      <node ref="A1" pin="7" pinfunction="A3" pintype="bidirectional"/>
+      <node ref="ANGLE_SRV0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="17" name="/SRV0_DRIVE_PWM">
+      <node ref="A1" pin="23" pinfunction="D5/PWM" pintype="bidirectional"/>
+      <node ref="DRIVE_PWM_SRV0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="18" name="/SRV0_POWER">
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="POWER_SRV0" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="D" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="D" pintype="passive"/>
+      <node ref="Q2" pin="5" pinfunction="D" pintype="passive"/>
+      <node ref="Q2" pin="6" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="19" name="Earth">
+      <node ref="A1" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="A1" pin="19" pinfunction="GND" pintype="power_in"/>
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="GND1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="GND2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="GND3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="GND4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J5" pin="5" pinfunction="GND" pintype="power_out"/>
+      <node ref="J5" pin="S1" pinfunction="Shield" pintype="passive"/>
+      <node ref="J5" pin="S2" pinfunction="Shield" pintype="passive"/>
+      <node ref="J5" pin="S3" pinfunction="Shield" pintype="passive"/>
+      <node ref="J5" pin="S4" pinfunction="Shield" pintype="passive"/>
+      <node ref="J5" pin="S5" pinfunction="Shield" pintype="passive"/>
+      <node ref="J5" pin="S6" pinfunction="Shield" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="TH1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="VREFCOM" pintype="power_in"/>
+      <node ref="U1" pin="3" pinfunction="V-" pintype="power_in"/>
+      <node ref="U2" pin="19" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="20" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="25" pinfunction="PAD" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="CE" pintype="input"/>
+      <node ref="U2" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="OTG" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(A1-Pad15)">
+      <node ref="A1" pin="15" pinfunction="VIN" pintype="power_in"/>
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="U2" pin="17" pinfunction="SW" pintype="bidirectional"/>
+      <node ref="U2" pin="18" pinfunction="SW" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="Net-(C4-Pad2)">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="BTST" pintype="bidirectional"/>
+    </net>
+    <net code="23" name="Net-(C16-Pad1)">
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2" pintype="input"/>
+      <node ref="U2" pin="21" pinfunction="PMID" pintype="bidirectional"/>
+      <node ref="U2" pin="22" pinfunction="PMID" pintype="bidirectional"/>
+    </net>
+    <net code="24" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="PG" pintype="open_collector"/>
+    </net>
+    <net code="26" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="STAT" pintype="open_collector"/>
+    </net>
+    <net code="28" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(Q1-Pad3)">
+      <node ref="Q1" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="G" pintype="input"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="RG" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="RG" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(R2-Pad1)">
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(R8-Pad2)">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="ILIM" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="Net-(R9-Pad2)">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="VSET" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="Net-(R10-Pad2)">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U2" pin="10" pinfunction="ICHGSET" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="Net-(R11-Pad2)">
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="TH1" pin="1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="TS" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="Net-(U1-Pad14)">
+      <node ref="U1" pin="14" pinfunction="VREF2.5" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="IAREF" pintype="input"/>
+    </net>
+    <net code="38" name="VBUS">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="VBUS" pintype="power_out"/>
+      <node ref="U2" pin="23" pinfunction="VBUS" pintype="power_in"/>
+      <node ref="VBUS0" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="39" name="VDC">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="Q2" pin="4" pinfunction="S" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="15" pinfunction="SYS" pintype="power_out"/>
+      <node ref="U2" pin="16" pinfunction="SYS" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="VDC0" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="40" name="VPP">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U2" pin="11" pinfunction="REGN" pintype="power_out"/>
+      <node ref="VREGN0" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="41" name="unconnected-(A1-Pad1)">
+      <node ref="A1" pin="1" pinfunction="D13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(A1-Pad3)">
+      <node ref="A1" pin="3" pinfunction="AREF" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(A1-Pad8)">
+      <node ref="A1" pin="8" pinfunction="A4/SDA" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(A1-Pad9)">
+      <node ref="A1" pin="9" pinfunction="A5/SCL" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(A1-Pad11)">
+      <node ref="A1" pin="11" pinfunction="A7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(A1-Pad12)">
+      <node ref="A1" pin="12" pinfunction="VUSB" pintype="power_out+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(A1-Pad13)">
+      <node ref="A1" pin="13" pinfunction="RST" pintype="input+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(A1-Pad16)">
+      <node ref="A1" pin="16" pinfunction="TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(A1-Pad17)">
+      <node ref="A1" pin="17" pinfunction="RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(A1-Pad18)">
+      <node ref="A1" pin="18" pinfunction="RST" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(A1-Pad22)">
+      <node ref="A1" pin="22" pinfunction="D4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(A1-Pad25)">
+      <node ref="A1" pin="25" pinfunction="D7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(A1-Pad26)">
+      <node ref="A1" pin="26" pinfunction="D8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(A1-Pad28)">
+      <node ref="A1" pin="28" pinfunction="D10/PWM" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(A1-Pad29)">
+      <node ref="A1" pin="29" pinfunction="D11/MOSI_" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(A1-Pad30)">
+      <node ref="A1" pin="30" pinfunction="D12/MISO" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(J5-Pad4)">
+      <node ref="J5" pin="4" pinfunction="ID" pintype="passive+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U1-Pad13)">
+      <node ref="U1" pin="13" pinfunction="VREFBG" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U1-Pad16)">
+      <node ref="U1" pin="16" pinfunction="VREF10" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
