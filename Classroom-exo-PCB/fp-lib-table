@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name "EDUEXO-custom-PCB")(type "KiCad")(uri "${KIPRJMOD}/EDUEXO-custom-PCB.pretty")(options "")(descr ""))
-  (lib (name "CBPR")(type "KiCad")(uri "${KIPRJMOD}/CBPR_LOGO/CBPR.preety")(options "")(descr ""))
-)
