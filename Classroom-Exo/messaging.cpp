@@ -415,14 +415,18 @@ void changeModes(message *msgIn, message *msgOut){
           uint8_t mode = msgIn->data[0];
           if (mode == 0x40) {
             uint8_t temp_pin = msgIn->data[1];
-            if (temp_pin == 1)
-              EMG_SELECT_PIN = A1;
-            else if (temp_pin == 2)
-              EMG_SELECT_PIN = A2;
+            if (temp_pin == 1) {
+              EMG0_SELECT_PIN = EMG_SENSOR0_PIN;
+              EMG1_SELECT_PIN = EMG_SENSOR1_PIN;
+            }
+            else if (temp_pin == 2) {
+              EMG0_SELECT_PIN = EMG_SENSOR1_PIN;
+              EMG1_SELECT_PIN = EMG_SENSOR0_PIN;
+            }
 
   #ifdef DEBUG
             Serial.print("Seletced Pin: ");
-            Serial.println(EMG_SELECT_PIN);
+            Serial.println(EMG0_SELECT_PIN);
   #endif
           }
 

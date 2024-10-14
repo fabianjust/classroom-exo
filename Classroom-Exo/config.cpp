@@ -14,7 +14,8 @@ String device_name = "";
 bool dev_ok = false;
 bool name_set = false;
 
-uint8_t EMG_SELECT_PIN = A1;
+uint8_t EMG0_SELECT_PIN = EMG_SENSOR0_PIN;
+uint8_t EMG1_SELECT_PIN = EMG_SENSOR1_PIN;
 
 // thresholds
 int16_t forceThresholdUpper = 30;

@@ -45,8 +45,8 @@ void updateSensors(sensorData *data) {
 
 
     // EMG data
-        float emg0 = readEMGSensor(EMG_SENSOR0_PIN);
-        float emg1 = readEMGSensor(EMG_SENSOR1_PIN);
+        float emg0 = readEMGSensor(EMG0_SELECT_PIN);
+        float emg1 = readEMGSensor(EMG1_SELECT_PIN);
         float newEmg[2] = {emg0, emg1};
 
         for (int i = 0; i < 2; i++) {

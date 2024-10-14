@@ -53,7 +53,10 @@ const uint8_t EMG_SENSOR0_PIN = A1;
 const uint8_t EMG_SENSOR1_PIN = A2;
 
 /// @brief Pin number for EMG sensor selection
-extern uint8_t EMG_SELECT_PIN;
+extern uint8_t EMG0_SELECT_PIN;
+
+/// @brief Pin number for EMG sensor selection
+extern uint8_t EMG1_SELECT_PIN;
 
 /// @brief Analog pin number for battery voltage measurement
 const uint8_t BATTERY_VOLTAGE_PIN = A6;
