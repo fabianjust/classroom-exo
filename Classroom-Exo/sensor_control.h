@@ -13,9 +13,9 @@
 #include <Arduino_LSM6DS3.h>
 
 
-const uint8_t EMG_WINDOW_SIZE = 5;
-const uint8_t FORCE_WINDOW_SIZE = 5;
-const uint8_t IMU_WINDOW_SIZE = 1;
+const uint8_t EMG_WINDOW_SIZE = 10;
+const uint8_t FORCE_WINDOW_SIZE = 10;
+const uint8_t IMU_WINDOW_SIZE = 10;
 
 /**
  * @brief Structure for sensor data
@@ -68,38 +68,60 @@ extern uint8_t angle_step;
 /// @brief Current control mode of the system
 extern uint8_t control_mode;
 
+extern float gain;
+
 /** @brief Global instance of current device settings */
 extern sensorData mySensors;
 
 
-/** @brief Signal value from EMG sensor 0 */
-extern uint16_t EMG0Signal;
-extern uint8_t emg_buffer_ndx;
-extern uint16_t EMG0Sum;
-extern uint16_t EMG0Buffer[EMG_WINDOW_SIZE];
-extern uint16_t EMG0AverageBuffer[EMG_WINDOW_SIZE];
-extern uint16_t EMG0Average;
+/** @defgroup emg0_vars EMG Sensor 0 Variables
+ *  @brief Signal values and buffers for EMG sensor 0
+ *  @{
+ */
+extern uint16_t EMG0Signal;      ///< Current signal value from EMG sensor 0
+extern uint8_t emg_buffer_ndx;   ///< Buffer index for EMG calculations
+extern uint16_t EMG0Sum;         ///< Running sum of EMG0 values
+extern uint16_t EMG0Buffer[EMG_WINDOW_SIZE];         ///< Raw signal buffer
+extern uint16_t EMG0AverageBuffer[EMG_WINDOW_SIZE];  ///< Moving average buffer
+extern uint16_t EMG0Average;     ///< Current average value
+/** @} */
 
-/** @brief Signal value from EMG sensor 1 */
-extern uint16_t EMG1Signal;
-extern uint8_t emg_buffer_ndx;
-extern uint16_t EMG1Sum;
-extern uint16_t EMG1Buffer[EMG_WINDOW_SIZE];
-extern uint16_t EMG1AverageBuffer[EMG_WINDOW_SIZE];
-extern uint16_t EMG1Average;
+/** @defgroup emg1_vars EMG Sensor 1 Variables
+ *  @brief Signal values and buffers for EMG sensor 1
+ *  @{
+ */
+extern uint16_t EMG1Signal;      ///< Current signal value from EMG sensor 1
+extern uint8_t emg_buffer_ndx;   ///< Buffer index for EMG calculations
+extern uint16_t EMG1Sum;         ///< Running sum of EMG1 values
+extern uint16_t EMG1Buffer[EMG_WINDOW_SIZE];         ///< Raw signal buffer
+extern uint16_t EMG1AverageBuffer[EMG_WINDOW_SIZE];  ///< Moving average buffer
+extern uint16_t EMG1Average;     ///< Current average value
+/** @} */
 
-/** @brief Current force reading */
-extern int16_t forceIs;
-extern uint8_t force_buffer_ndx;
-extern int16_t ForceBuffer[FORCE_WINDOW_SIZE];
-extern int16_t ForceAverage;
-extern int16_t ForceSum;
+/** @defgroup force_vars Force Sensor Variables
+ *  @brief Force sensor readings and processing buffers
+ *  @{
+ */
+extern int16_t forceIs;          ///< Current force reading
+extern uint8_t force_buffer_ndx; ///< Index for force buffer
+extern int16_t ForceBuffer[FORCE_WINDOW_SIZE];  ///< Buffer for force readings
+extern int16_t ForceAverage;     ///< Average force value
+extern int16_t ForceSum;         ///< Running sum of force values
+/** @} */
 
-/** @brief Current IMU readings */
-extern float acc_x, acc_y, acc_z;
-extern float gy_x, gy_y, gy_z;
-extern unsigned long int_gy_x, int_gy_y, int_gy_z;
-extern unsigned long int_acc_x, int_acc_y, int_acc_z;
+/** @defgroup imu_vars IMU Sensor Variables
+ *  @brief IMU acceleration and gyroscope readings
+ *  @{
+ */
+extern float acc_x, acc_y, acc_z;  ///< Accelerometer readings for X, Y, Z axes converted to float
+extern float gy_x, gy_y, gy_z;     ///< Gyroscope readings for X, Y, Z axes converted to float
+extern unsigned long int_gy_x;     ///< Gyroscope X reading
+extern unsigned long int_gy_y;     ///< Gyroscope Y reading
+extern unsigned long int_gy_z;     ///< Gyroscope Z reading
+extern unsigned long int_acc_x;    ///< Accelerometer X reading
+extern unsigned long int_acc_y;    ///< Accelerometer Y reading
+extern unsigned long int_acc_z;    ///< Accelerometer Z reading
+/** @} */
 
 // initialize variable for reading sensor data with 100hz
 extern unsigned long currentSensorTime;
@@ -149,6 +171,8 @@ uint16_t readServoAngle();
  */
 void biThresholdControl(float sensorAverage, float upper_thresh, float lower_thresh);
 
+void biThresholdBicontrol(float sensor1Average, float sensor2Average, float thresh1, float thresh2);
+
 /**
  * @brief Implements mono-threshold control for the servo motor using either force or emg sensor data
  * @param sensorAverage The average reading from the sensor
@@ -165,6 +189,40 @@ void monoThresholdcontrol(float sensorAverage, float thresh);
 void monoThresholdBicontrol(float sensor1Average, float sensor2Average, float thresh);
 
 /**
+ * @brief Controls exoskeleton movement based on proportional EMG signals from antagonistic muscles
+ * @param sensor1Average Filtered average of first EMG sensor (typically biceps)
+ * @param sensor2Average Filtered average of second EMG sensor (typically triceps)
+ */
+void proportionalEMGControl(float sensor1Average, float sensor2Average);
+
+/**
+ * @brief Controls exoskeleton using co-contraction strategy for EMG signals
+ * @param sensor1Average Filtered average of first EMG sensor (typically biceps)
+ * @param sensor2Average Filtered average of second EMG sensor (typically triceps)
+ */
+void cocontractionEMGControl(float sensor1Average, float sensor2Average);
+
+/**
+ * @brief Implements "first come, first serve" control strategy for EMG signals
+ * @param sensor1Average Filtered average of first EMG sensor (typically biceps)
+ * @param sensor2Average Filtered average of second EMG sensor (typically triceps)
+*/
+void firstcomeEMGControl(float sensor1Average, float sensor2Average);
+
+/**
+ * @brief Implements proportional control using single force sensor
+* @param sensorAverage Filtered average of force sensor reading
+*/
+void proportionalControl(float sensorAverage);
+
+/**
+ * @brief Adaptive threshold-based control for single sensor
+ * @param sensorAverage Filtered average of sensor reading
+ * @param thresh Initial threshold value for activation
+ */
+void adaptiveMonoThresholdControl(float sensorAverage, float thresh);
+
+/**
  * @brief Packages sensor data into a message structure
  * @param data The sensor data to be packaged
  * @param msg2send The message structure to be filled with the packaged data
@@ -174,14 +232,12 @@ void packageSensorData(const sensorData& data, message *msgOut, uint8_t opcode);
 
 /**
  * @brief Handles the IMU data stream
- * 
  * @param imu_stream A boolean flag indicating whether the IMU stream should be enabled or disabled
  */
 void handleIMUStream(bool imu_stream);
 
 /**
  * @brief Handles the general sensor data stream
- * 
  * @param sensor_stream A boolean flag indicating whether the sensor stream should be enabled or disabled
  * @param control_mode The current control mode of the system
  */

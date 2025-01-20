@@ -14,6 +14,7 @@
 #include "battery_management.h"
 #include "servo_control.h"
 #include "control_modes.h"
+#include "signal_generator.h"
 
 /// @brief Flag indicating if Matlab is connected
 extern boolean MatlabConnected;
@@ -77,7 +78,6 @@ void receiveMessage();
 
 /**
  * @brief Receives a large buffer of data for the pid controller curve
- * 
  * @param msgIn Pointer to the message structure containing the incoming data
  */
 void receiveBigBuffer(message *msgIn);
@@ -90,7 +90,6 @@ void sendMessage(message *msgOut);
 
 /**
  * @brief Checks the validity of a received command
- * 
  * @param msgIn Pointer to the message structure containing the received command
  * @return true If the command is valid, false otherwise
  */
@@ -98,7 +97,6 @@ bool checkReceivedCommand(message *msgIn);
 
 /**
  * @brief Changes modes based on received message and prepares a response
- * 
  * @param msgIn Pointer to the incoming message structure
  * @param msgOut Pointer to the outgoing message structure for the response
  */
@@ -106,18 +104,17 @@ void changeModes(message *msgIn, message *msgOut);
 
 /**
  * @brief Stores a single byte in a large buffer
- * 
  * @param data The byte to be stored in the buffer
  */
 void storeByteInBigBuffer(byte data);
 
 /**
  * @brief Stores the pid trajectory in a large buffer, before converting the value to angles
- * 
  * @param data The byte to be stored in the buffer
  */
 bool checkReceivedCommand(message *msgIn, message *msgOut);
 
 float bytesToFloatFromArray(byte* array, int startIndex);
 
+unsigned long bytesToLongFromArray(byte* array, int startIndex);
 #endif  // MESSAGING_H

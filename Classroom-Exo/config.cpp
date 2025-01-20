@@ -25,11 +25,15 @@ uint16_t emgThresholdLower = 30;
 uint16_t emgThreshold = 500;
 uint8_t speed_setting = 1;
 uint8_t angle_step = 10;
+float gain = 0.1;
 
 /**
  * @brief Initializes the hardware GPIO pins
  */
 void initializeHardware() {
+    // Set ADC resolution to 12 bit
+    analogReadResolution(12);
+
     // Set up LED Pins
     pinMode(LED_PIN, OUTPUT);
     pinMode(RED_PIN, OUTPUT);
@@ -75,7 +79,7 @@ void checkDeviceIntegrity() {
       Serial.print("Zero Servo Reference Bytes: ");
       Serial.println(currentSettings.servoZeroReferenceBytes);
       Serial.print("Ninety Servo Reference Bytes: ");
-      Serial.println(currentSettings.servo140ReferenceBytes);
+      Serial.println(currentSettings.servo110ReferenceBytes);
       Serial.print("Force Sensor Zero Reference: ");
       Serial.println(currentSettings.forceZeroReferenceValue);
 #endif
