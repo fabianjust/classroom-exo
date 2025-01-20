@@ -1,7 +1,7 @@
 # classroom-exo
 Classroom-ready open-source educational exoskeleton for biomedical and control engineering
 
-The classroom exo development is guided by the manual.
+The classroom Exo development is guided by the manual.
 The manual is designed to assist you in seamlessly transitioning from EduExoPro to Classroom Exo. Whether you're a developer, educator, or enthusiast, the detailed content in each folder aims to provide clarity and guidance.
 
 How to Use This Manual:

@@ -6,7 +6,7 @@
 
 unsigned long currentSensorTime = 0;      // stores the current time
 unsigned long previousSensorTime = 0;     // Stores the last time the message was sent
-unsigned long sensor_interval = 20; // 20 ms interval
+unsigned long sensor_interval = 5; // 5 ms interval
 
 
 void initializeSensors(sensorData* data) {
@@ -105,11 +105,11 @@ void biThresholdControl(float sensorAverage, float upper_thresh, float lower_thr
 
     if (sensorAverage < lower_thresh)
     {
-        positionDesired = min(positionDesired + angleStep/speed_setting, minAngle);
+        positionDesired = min(positionDesired + angleStep, minAngle);
     }
     else if (sensorAverage > upper_thresh)
     {
-        positionDesired = max(positionDesired - angleStep/speed_setting, maxAngle);
+        positionDesired = max(positionDesired - angleStep, maxAngle);
     }
 
     
@@ -119,21 +119,23 @@ void biThresholdControl(float sensorAverage, float upper_thresh, float lower_thr
     
 
     #ifdef DEBUG
+    Serial.print(" ");
     Serial.print(sensorAverage);
-    Serial.print("  ");
+    Serial.print(" bi ");
     Serial.println(positionDesired);
     #endif
 
 };
 
-void monoThresholdcontrol(float sensorAverage, float thresh) {
-    if (sensorAverage < thresh)
+// function by Hellberg etc.
+void biThresholdBicontrol(float sensor1Average, float sensor2Average, float thresh1, float thresh2) {
+    if (sensor1Average >= thresh1)
     {
-        positionDesired = min(positionDesired + angleStep/speed_setting, minAngle);
+        positionDesired = max(positionDesired + angleStep, maxAngle);
     }
-    else if (sensorAverage >= thresh)
+    else if (sensor2Average >= thresh2)
     {
-        positionDesired = max(positionDesired - angleStep/speed_setting, maxAngle);
+        positionDesired = max(positionDesired - angleStep, minAngle);
     }
 
     
@@ -143,8 +145,35 @@ void monoThresholdcontrol(float sensorAverage, float thresh) {
     
 
     #ifdef DEBUG
+    Serial.print(" ");
+    Serial.print(sensor1Average);
+    Serial.print(" bi ");
+    Serial.print(sensor2Average);
+    Serial.print(" bi ");
+    Serial.println(positionDesired);
+    #endif
+};
+
+void monoThresholdcontrol(float sensorAverage, float thresh) {
+    if (sensorAverage < thresh)
+    {
+        positionDesired = min(positionDesired + angleStep, minAngle);
+    }
+    else if (sensorAverage >= thresh)
+    {
+        positionDesired = max(positionDesired - angleStep, maxAngle);
+    }
+
+    
+    moveToPositionDeg2Microseconds(positionDesired, currentSettings);
+    uint16_t positionIs = analogRead(SERVO_POSITION_PIN);
+    uint16_t currentServoPosition = adcToDegrees(positionIs, currentSettings);
+    
+
+    #ifdef DEBUG
+    Serial.print(" ");
     Serial.print(sensorAverage);
-    Serial.print("  ");
+    Serial.print(" mono ");
     Serial.println(positionDesired);
     #endif
 };
@@ -152,11 +181,11 @@ void monoThresholdcontrol(float sensorAverage, float thresh) {
 void monoThresholdBicontrol(float sensor1Average, float sensor2Average, float thresh) {
     if (sensor1Average < thresh)
     {
-        positionDesired = min(positionDesired + angleStep/speed_setting, minAngle);
+        positionDesired = min(positionDesired + angleStep, minAngle);
     }
     else if (sensor2Average >= thresh)
     {
-        positionDesired = max(positionDesired - angleStep/speed_setting, maxAngle);
+        positionDesired = max(positionDesired - angleStep, maxAngle);
     }
 
     
@@ -166,13 +195,71 @@ void monoThresholdBicontrol(float sensor1Average, float sensor2Average, float th
     
 
     #ifdef DEBUG
+    Serial.print(" ");
     Serial.print(sensor1Average);
-    Serial.print("  ");
+    Serial.print(" mno ");
     Serial.print(sensor2Average);
-    Serial.print("  ");
+    Serial.print(" mono ");
     Serial.println(positionDesired);
     #endif
 };
+
+
+// void monoProportionalControl(float sensorAverage, float valueDesired, float thresh) {
+//     if (abs(sensorAverage) > thresh)
+//     {
+//         positionDesired -= gain * (sensorAverage - valueDesired);
+//     }
+    
+//     // Limit checking
+//     positionDesired = constrain(positionDesired, maxAngle, minAngle);
+    
+//     moveToPositionMicroseconds(positionDesired);
+    
+//     #ifdef DEBUG
+//     Serial.print(sensorAverage);
+//     Serial.print(" force ");
+//     Serial.print(valueDesired);
+//     Serial.print(" desired ");
+//     Serial.println(positionDesired);
+//     #endif
+// }
+
+// void biProportionalControl(float sensorAverage, float valueDesired, float thresh1, float thresh2) {
+//     if (sensorAverage > thresh1) {
+//         positionDesired -= gain * (sensorAverage - valueDesired);
+//     } 
+//     else if (sensorAverage < thresh2) {
+//         positionDesired -= gain * (valueDesired - sensorAverage);
+//     }
+
+//     // Limit checking
+//     positionDesired = constrain(positionDesired, maxAngle, minAngle);
+    
+//     moveToPositionMicroseconds(positionDesired);
+    
+//     #ifdef DEBUG
+//     Serial.print(sensorAverage);
+//     Serial.print(" force ");
+//     Serial.print(valueDesired);
+//     Serial.print(" desired ");
+//     Serial.println(positionDesired);
+//     #endif
+// }
+
+
+// void proportionalControl(float sensorAverage) {
+//     // Position change proportional to force
+//     float normalizedForce = (filteredForce - baselineForce) / FORCE_MAX;
+//     newPosition = positionDesired + normalizedForce * VELOCITY_GAIN;
+//     #ifdef DEBUG
+//     Serial.print(sensor1Average);
+//     Serial.print("  ");
+//     Serial.print(sensor2Average);
+//     Serial.print("  ");
+//     Serial.println(positionDesired);
+//     #endif
+// }
 
 void handleSensorStream(bool sensor_stream, uint8_t control_mode)
 {
@@ -190,21 +277,24 @@ void handleSensorStream(bool sensor_stream, uint8_t control_mode)
     // Handle servo movement
     if (currentTime - previousServoTime >= servo_move_interval)
     {
-        previousServoTime = currentTime;
         updateServoPosition(control_mode, &mySensors);
+        previousServoTime = currentTime;
     }
 
     // Handle data sending
     if (currentTime - previousSendingTime >= sending_interval)
     {
-
+        #ifdef DEBUG
         Serial.print("Elapsed time: ");
         Serial.println(currentTime - previousSendingTime);
+        #endif
         previousSendingTime = currentTime; // Update the previous time
         packageSensorData(mySensors, &msg2send, control_mode);
         sendMessage(&msg2send);
+        #ifdef DEBUG
         Serial.print(control_mode);
         Serial.println(" .. sent Sensor data");
+        #endif
     }
 }
 
@@ -225,12 +315,16 @@ void handleIMUStream(bool imu_stream)
     // Handle data sending
     if (currentTime - previousSendingTime >= sending_interval)
     {
+        #ifdef DEBUG
         Serial.print("Elapsed time: ");
         Serial.println(currentTime - previousSendingTime);
+        #endif
         previousSendingTime = currentTime; // Update the previous time
         packageSensorData(mySensors, &msg2send, IMU_ANSWER);
         sendMessage(&msg2send);
+        #ifdef DEBUG
         Serial.println("sent IMU data");
+        #endif
     }
 }
 
@@ -240,10 +334,12 @@ void packageSensorData(const sensorData& data, message *msgOut, uint8_t opcode_m
     msgOut->opcode = opcode_mode;
     msgOut->dataLength = 36+2;  // 4 bytes each for force, 2 emg and 3 gyro and 3 accel values, plus 2bytes for angle
 
+    #ifdef DEBUG
     Serial.println("x  y  z");
     Serial.print(data.gyroAvg[0]); Serial.print(" ");
     Serial.print(data.gyroAvg[2]); Serial.print(" ");
     Serial.print(data.gyroAvg[3]); Serial.print(" ");
+    #endif
 
     // Use memcpy to copy the bytes of each float into the data array
     memcpy(&msgOut->data[0], &data.forceAvg, sizeof(float));

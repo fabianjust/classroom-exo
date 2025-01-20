@@ -16,6 +16,10 @@
 #include "messaging.h"
 
 
+extern Servo myservo;
+
+extern PID myPID;
+
 
 /** @brief Current state of the servo (on/off) */
 extern boolean servo_state;
@@ -91,6 +95,8 @@ extern uint8_t cycle_counter;
 
 extern float previousError;
 
+extern int lastInput;
+
 // Step response variables
 extern bool stepResponseActive;
 extern unsigned long stepStartTime;
@@ -98,55 +104,16 @@ const unsigned long maxStepDuration = 15000;  // 15 seconds maximum for each ste
 const float positionTolerance = 50;  // Tolerance for considering position reached (in PWM)
 const unsigned long settleDuration = 1000;  // Time to stay within tolerance (in milliseconds)
 extern unsigned long withinToleranceTime;  // Time when position first came within tolerance
+extern unsigned long lastFilterTime;
+const unsigned long filterInterval = 5;  // Filter update interval in milliseconds (200 Hz)
 
 // New variable to control program start
 extern bool programStarted;
 
 // Low-pass filter variables
-const float alpha = 0.2; // Filter coefficient (0 < alpha < 1)
+const float alpha = 0.5; // Filter coefficient (0 < alpha < 1)
 extern float filteredPosition; // Initial filtered position (center of 10-bit ADC range)
 
-
-/**
- * @brief Structure for PI Controller
- */
-typedef struct {
-    int pwm_target;
-    int pwm_current;
-    float velocity_current;
-    float integral_error;
-    float Kp;  // Proportional gain
-    float Ki;  // Integral gain
-    float velocity_limit;
-    float integral_limit;  // To prevent integral windup
-    int deadband;  // Deadband range
-    int min_pwm; // Minimum allowed PWM value
-    int max_pwm; // Maximum allowed PWM value
-    int min_step; // Minimum step size (twice the deadband)
-} PIController_t;
-
-
-/**
- * @brief Structure for step response parameters
- */
-typedef struct{
-    bool active;
-    unsigned long startTime;
-    unsigned long maxDuration;
-    int positionTolerance;
-    unsigned long settleDuration;
-    unsigned long withinToleranceTime;
-    uint16_t initialStep;
-    uint16_t finalStep;
-    int currentIteration;
-    int totalIterations;
-    bool isInitialStep;
-} StepResponse_t;
-
-/** @brief Global instance of current device settings */
-extern PIController_t servo_controller;
-
-extern StepResponse_t step_response;
 
 /**
  * @brief Initialize the servo
@@ -239,6 +206,8 @@ void updateServoPosition(uint8_t control_mode, sensorData *data);
  */
 void packageServoData(message *msg2send, uint16_t currentPosition);
 
+void packageServoDataFloat(message *msgOut, float currentPosition);
+
 /**
  * @brief Handles the logic for resetting the servo to its initial or calibrated position
  */
@@ -248,14 +217,22 @@ void pi_handler();
 
 void performStepResponse();
 
-int readAndFilterPosition();
+void moveToNextStep();
 
-int mapAnalogToPWM();
+void endStepResponse();
+
+void updateFilteredPosition();
+
+int mapAnalogToPWM(const DeviceSettings &defaultsettings);
+
+float mapAnalogToDeg(const DeviceSettings &defaultsettings);
 
 void startStepResponse();
 
-void PIController_tick(PIController_t *controller, float dt);
+void PIDController_tick(PIDController_t *controller, float dt);
 
 bool isPositionReached();
+
+void initializeSignalGenerator(SignalType type);
 
 #endif // SERVO_CONTROL_H

@@ -1,0 +1,101 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3271489529" file="D:\CBPR Projects\01_Exos\classroom-exo\Updated BT-GUI_10-24\CLASSROOM EXO.prj" location="D:\CBPR Projects\01_Exos\classroom-exo\Updated BT-GUI_10-24" name="CLASSROOM EXO" target="target.mlapps" target-name="Package App">
+    <param.appname>CLASSROOM EXO</param.appname>
+    <param.authnamewatermark>Sarah Stoiber</param.authnamewatermark>
+    <param.email />
+    <param.company>Chalmers Techniska Högskola</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary>This App enables the user to interact with and control the CLASSROOM EXO exoskeletoon using pid controller, sEMG or Force control mode.</param.summary>
+    <param.description />
+    <param.screenshot />
+    <param.version>1.0</param.version>
+    <param.products.name>
+      <item>Control System Toolbox</item>
+      <item>Robotics System Toolbox</item>
+      <item>Sensor Fusion and Tracking Toolbox</item>
+      <item>Signal Processing Toolbox</item>
+      <item>Symbolic Math Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>3</item>
+      <item>142</item>
+      <item>157</item>
+      <item>8</item>
+      <item>15</item>
+    </param.products.id>
+    <param.products.version>
+      <item>23.2</item>
+      <item>23.2</item>
+      <item>23.2</item>
+      <item>23.2</item>
+      <item>23.2</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>a7df6e0d-876d-422e-94fd-99690d9cc128</param.guid>
+    <unset>
+      <param.email />
+      <param.icon />
+      <param.icons />
+      <param.description />
+      <param.screenshot />
+      <param.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\BT_GUI.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\CheckBattery.m</file>
+      <file>${PROJECT_ROOT}\CommunicationFunctions.m</file>
+      <file>${PROJECT_ROOT}\CommunicationManager.m</file>
+      <file>${PROJECT_ROOT}\ControlFunctions.m</file>
+      <file>${PROJECT_ROOT}\ControllerParameters.m</file>
+      <file>${PROJECT_ROOT}\EMGPlotConfig.m</file>
+      <file>${PROJECT_ROOT}\findBT_devices_and_COMPorts.m</file>
+      <file>${PROJECT_ROOT}\ForcePlotConfig.m</file>
+      <file>${PROJECT_ROOT}\IMUAnimation.m</file>
+      <file>${PROJECT_ROOT}\lower_arm_default.mat</file>
+      <file>${PROJECT_ROOT}\PlotConfig.m</file>
+      <file>${PROJECT_ROOT}\SensorFilter.m</file>
+      <file>${PROJECT_ROOT}\SensorPlotManager.m</file>
+      <file>${PROJECT_ROOT}\SensorVisualization.m</file>
+      <file>${PROJECT_ROOT}\ServoPlotConfig.m</file>
+      <file>${PROJECT_ROOT}\ServoPlotManager.m</file>
+      <file>${PROJECT_ROOT}\SignalSimulator.m</file>
+      <file>${PROJECT_ROOT}\StepPlotConfig.m</file>
+      <file>${PROJECT_ROOT}\UIStateManager.m</file>
+      <file>${PROJECT_ROOT}\upper_arm_default.mat</file>
+    </fileset.depfun>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\photos</file>
+      <file>${PROJECT_ROOT}\stl</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="D:\CBPR Projects\01_Exos\classroom-exo" name="Updated BT-GUI_10-24" optional="false">D:\CBPR Projects\01_Exos\classroom-exo\Updated BT-GUI_10-24</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2023b</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

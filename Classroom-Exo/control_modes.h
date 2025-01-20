@@ -41,14 +41,17 @@ extern bool imu_stream;
 /// @brief Flag indicating whether general sensor data streaming is active
 extern bool sensor_stream;
 
-/// @brief Mode constant for bi-threshold EMG operation
-const uint8_t BI_EMG_MODE = 0x40;
+/// @brief Mode constant for bi-sensor EMG operation
+const uint8_t BI_EMG_MODE = 0x42;
 
 /// @brief Mode constant for force sensor operation
 const uint8_t FORCE_MODE = 0x41;
 
-/// @brief Mode constant for mono-threshold EMG operation
-const uint8_t MONO_EMG_MODE = 0x42;
+/// @brief Mode constant for proportional force sensor operation
+const uint8_t PROP_FORCE_MODE = 0x43;
+
+/// @brief Mode constant for mono-sensor EMG operation
+const uint8_t MONO_EMG_MODE = 0x40;
 
 /// @brief Mode constant for IMU operation
 const uint8_t IMU_MODE = 0x44;

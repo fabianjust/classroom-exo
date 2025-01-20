@@ -261,12 +261,12 @@ bool checkReceivedCommand(message *msgIn, message *msgOut) {
   uint8_t newCheckSum = msgIn->header + msgIn->opcode + msgIn->dataLength;
 
   if (temp == newCheckSum) {
-    msgOut->opcode = COMMAND_OK;
+    msgOut->opcode = RESP_COMMAND_OK;
     return true;
   }
 
   else {
-    msgOut->opcode = WRONG_CHECKSUM;
+    msgOut->opcode = ERR_WRONG_CHECKSUM;
     return false;
   }
 }
@@ -276,9 +276,9 @@ void changeModes(message *msgIn, message *msgOut){
   msgOut->header = HEADER;
   msgOut->dataLength = 0;
 
-  if ((msgIn->header == 0xFF) && (msgOut->opcode == COMMAND_OK)) {
+  if ((msgIn->header == 0xFF) && (msgOut->opcode == RESP_COMMAND_OK)) {
       switch (msgIn->opcode) {
-        case TEST_CONNECT: {
+        case CMD_TEST_CONNECT: {
 #ifdef DEBUG
           Serial.println("0x01...");
 #endif
@@ -290,38 +290,41 @@ void changeModes(message *msgIn, message *msgOut){
           delay(1);
           digitalWrite(LED_PIN, LOW);
 
-          msgOut->opcode = VERIF_CONNECTION;
+          msgOut->opcode = RESP_VERIF_CONNECTION;
         }
         break;
         
-        case STOP_CONNECT: {
+        case CMD_STOP_CONNECT: {
   #ifdef DEBUG
           Serial.println("0x15...Stopped connection");
   #endif
           changeLEDButtonColor(0x10);
 
-          msgOut->opcode = VERIF_CONNECTION;
+          msgOut->opcode = RESP_VERIF_CONNECTION;
           MatlabConnected = false;
+
+          // turn off servo motor
+          servo_state = deactivateServo();
         }
         break;
 
-        case SET_LED: {
+        case CMD_SET_LED: {
           uint8_t color = msgOut->data[0];
           changeLEDButtonColor(color);
 
-          msgOut->opcode = STATE_ANSWER;
-          msgOut->data[0] = LED_SET;
+          msgOut->opcode = RESP_STATE_ANSWER;
+          msgOut->data[0] = RESP_LED_SET;
           msgOut->dataLength = 1;
         }
         break;
 
-        case GET_BAT_VOLTAGE: { // read actual Battery Voltage in mV
+        case CMD_GET_BAT_VOLTAGE: { // read actual Battery Voltage in mV
           memcpy(&msgOut->data[0], &myBat.batAverag, sizeof(float));
           msgOut->dataLength = 4;
         }
         break;
 
-        case EMERGENCY_STOP: { // read actual Battery Voltage in mV
+        case CMD_EMERGENCY_STOP: { // read actual Battery Voltage in mV
           memcpy(&msgOut->data[0], &myBat.batAverag, sizeof(float));
           msgOut->dataLength = 4;
 
@@ -345,31 +348,48 @@ void changeModes(message *msgIn, message *msgOut){
         }
         break;
 
-        case SET_THRESHOLDS: {
+        case CMD_SET_THRESHOLDS: {
           switch (msgIn->data[0]){
             case FORCE_MODE: {
               forceThresholdUpper = (msgIn->data[2] << 8u) + msgIn->data[1];
               forceThresholdLower = ((msgIn->data[4] << 8u) + msgIn->data[3])*-1;
-              speed_setting = msgIn->data[5];
-              angleStep = msgIn->data[6];
+              
+    
+    #ifdef DEBUG
+              Serial.print("Upper forceThreshold: ");
+              Serial.print(forceThresholdUpper);
+              Serial.print("     Lower forceThreshold: ");
+              Serial.println(forceThresholdLower);
+    #endif
+            }
+            break;
+
+            case PROP_FORCE_MODE: {
+              forceThresholdUpper = (msgIn->data[2] << 8u) + msgIn->data[1];
+              forceThresholdLower = ((msgIn->data[4] << 8u) + msgIn->data[3])*-1;
+              gain = bytesToFloatFromArray(msgIn->data,5);
     
     #ifdef DEBUG
               Serial.print("Upper forceThreshold: ");
               Serial.print(forceThresholdUpper);
               Serial.print("     Lower forceThreshold: ");
               Serial.print(forceThresholdLower);
-              Serial.print("     Speed: ");
-              Serial.print(speed_setting);
-              Serial.print("     AngleStep: ");
-              Serial.println(angleStep);
+              Serial.print("     Gain: ");
+              Serial.println(gain);
     #endif
             }
             break;
 
             case MONO_EMG_MODE: {
-              emgThreshold = (msgIn->data[2] << 8u) + msgIn->data[1];
-              speed_setting = msgIn->data[3];
-              angleStep = msgIn->data[4];
+              emgThresholdUpper = (msgIn->data[2] << 8u) + msgIn->data[1];
+              emgThresholdLower = (msgIn->data[4] << 8u) + msgIn->data[3];
+              
+    #ifdef DEBUG
+              Serial.print("Upper emgThreshold: ");
+              Serial.print(emgThresholdUpper);
+              Serial.print("     Lower emgThreshold: ");
+              Serial.println(emgThresholdLower);
+    #endif
 
             }
             break;
@@ -377,17 +397,12 @@ void changeModes(message *msgIn, message *msgOut){
             case BI_EMG_MODE: {
               emgThresholdUpper = (msgIn->data[2] << 8u) + msgIn->data[1];
               emgThresholdLower = (msgIn->data[4] << 8u) + msgIn->data[3];
-              speed_setting = msgIn->data[5];
-              angleStep = msgIn->data[6];
+              
     #ifdef DEBUG
               Serial.print("Upper emgThreshold: ");
               Serial.print(emgThresholdUpper);
               Serial.print("     Lower emgThreshold: ");
-              Serial.print(emgThresholdLower);
-              Serial.print("     Speed: ");
-              Serial.print(speed_setting);
-              Serial.print("     AngleStep: ");
-              Serial.println(angleStep);
+              Serial.println(emgThresholdLower);
     #endif
             }
             break;
@@ -399,19 +414,19 @@ void changeModes(message *msgIn, message *msgOut){
               emgThresholdLower = 30;
               emgThreshold = 500;
               speed_setting = 1;
-              angle_step = 10;
+              angleStep = 10;
               msgOut->data[0] = 0x00;
             }
             break;
           }
 
-          msgOut->opcode = COMMAND_OK;
+          msgOut->opcode = RESP_COMMAND_OK;
           msgOut->data[0] = msgIn->data[0];
           msgOut->dataLength = 1;
           }
         break;
 
-        case SET_ANALOG_PINS: {
+        case CMD_SET_ANALOG_PINS: {
           uint8_t mode = msgIn->data[0];
           if (mode == 0x40) {
             uint8_t temp_pin = msgIn->data[1];
@@ -430,34 +445,40 @@ void changeModes(message *msgIn, message *msgOut){
   #endif
           }
 
-          msgOut->opcode = COMMAND_OK;
-          msgOut->data[0] = COMMAND_OK;
+          msgOut->opcode = RESP_COMMAND_OK;
+          msgOut->data[0] = RESP_COMMAND_OK;
           msgOut->dataLength = 1;
         }
         break;
 
-        case ACTV_SERVO: {
+        case CMD_ACTV_SERVO: {
           uint8_t set_servo_state = msgIn->data[0];
   #ifdef DEBUG
           Serial.print("servo:");
           Serial.println(set_servo_state);
   #endif
-          if ((set_servo_state == SERVO_ACTIVATED))
+          if ((set_servo_state == RESP_SERVO_ACTIVATED))
           {
   #ifdef DEBUG
-            Serial.println("Servo activated");
+            
   #endif
             servo_state = activateServo();
-            msgOut->data[0] = SERVO_ACTIVATED;
+            // servo_state = true;
+            // myservo.write(180);
+            // myservo.attach(SERVO_CONTROL_PIN, 1265, 2400); // Attach the servo to pin 5 & move to approx current position
+            // digitalWrite(SERVO_POWER_PIN, HIGH);
+            // Serial.print(myservo.readMicroseconds());
+            Serial.println("  Servo activated");
+            msgOut->data[0] = RESP_SERVO_ACTIVATED;
             msgOut->dataLength = 1;
           }
-          else if ((set_servo_state == SERVO_DEACTIVATED))
+          else if ((set_servo_state == RESP_SERVO_DEACTIVATED))
           {
   #ifdef DEBUG
             Serial.println("Servo deactivated");
   #endif
             servo_state = deactivateServo();
-            msgOut->data[0] = SERVO_DEACTIVATED;
+            msgOut->data[0] = RESP_SERVO_DEACTIVATED;
             msgOut->dataLength = 1;
           }
           else if (servo_state)
@@ -466,19 +487,19 @@ void changeModes(message *msgIn, message *msgOut){
             Serial.println("Servo deactivated 2");
   #endif
             servo_state = deactivateServo();
-            msgOut->data[0] = SERVO_DEACTIVATED;
+            msgOut->data[0] = RESP_SERVO_DEACTIVATED;
             msgOut->dataLength = 1;
           }
-          msgOut->opcode = COMMAND_OK;
+          msgOut->opcode = RESP_COMMAND_OK;
         }
         break;
 
-        case ZERO_SERVO: {
+        case CMD_ZERO_SERVO: {
           ref_degree = (msgIn->data[1] << 8u) + msgIn->data[0];
           speed_setting = msgIn->data[2];
           angleStep = msgIn->data[3];
 
-          zeroServoAngle = ref_degree - 100;
+          zeroServoAngle = ref_degree/10;
           if (zeroServoAngle > minAngle)
           {
             zeroServoAngle = minAngle;
@@ -497,43 +518,69 @@ void changeModes(message *msgIn, message *msgOut){
           zero_servo = true;
           previousServoTime = millis();
 
-          if (zero_servo)
-            changeLEDButtonColor(0x01);
-          else if (!zero_servo)
-          {
-            pollBatteryVoltage(&myBat);
-          }
+          // if (zero_servo)
+          //   changeLEDButtonColor(0x01);
+          // else if (!zero_servo)
+          // {
+          //   pollBatteryVoltage(&myBat);
+          // }
 
-          msgOut->opcode = COMMAND_OK;
-          msgOut->data[0] = ZERO_SERVO;
+          myservo.write(zeroServoAngle);
+
+          msgOut->opcode = RESP_COMMAND_OK;
+          msgOut->data[0] = CMD_ZERO_SERVO;
           msgOut->dataLength = 1;
         }
         break;
 
-        case SET_SPEED: {
+        case CMD_SET_SPEED: {
           speed_setting = msgIn->data[0];
+          servo_move_interval = 20;
+
+          switch (speed_setting){
+            case 1: {
+              angleStep = 15;
+              
+            } break;
+            case 2: {
+              angleStep = 10;              
+            } break;
+            case 3: {
+              angleStep = 7; 
+            } break;
+            case 4:{
+              angleStep = 5;  
+            } break;
+
+            default:{
+              servo_move_interval = 20;
+              angleStep = 7;
+            } break;
+          }
   #ifdef DEBUG
-          Serial.print("speed: ");
-          Serial.println(speed_setting);
+              Serial.print("servo interval ");
+              Serial.println(servo_move_interval);
+              Serial.print("     AngleStep: ");
+              Serial.println(angleStep);
   #endif
-          msgOut->data[0] = COMMAND_OK;
+          msgOut->data[0] = RESP_COMMAND_OK;
           msgOut->dataLength = 1;
         }
         break;
 
-        case SET_PACKAGE_COUNTER: {
+        case CMD_SET_PACKAGE_COUNTER: {
           pid_package_nums = msgIn->data[0];
   #ifdef DEBUG
           Serial.print("nums of pid packages: ");
           Serial.println(pid_package_nums);
   #endif
-          msgOut->opcode = COMMAND_OK;
-          msgOut->data[0] = SET_SPEED;
+          msgOut->opcode = RESP_COMMAND_OK;
+          msgOut->data[0] = CMD_SET_SPEED;
           msgOut->dataLength = 1;
         }
         break;
 
-        case MOVE_PID: {
+        case CMD_MOVE_PID: {
           if ((bigBufferIndex >= (PID_steps / 2)) && (pid_package_counter >= pid_package_nums))
           { //(msgOut.dataLength+117)
             pid_stream = true;
@@ -568,59 +615,173 @@ void changeModes(message *msgIn, message *msgOut){
             Serial.println(PID_steps);
           }
   #endif
-          msgOut->data[0] = MOVE_PID;
+          msgOut->data[0] = CMD_MOVE_PID;
           msgOut->dataLength = 1;
         }
         break;
 
-        case SET_PI_CONTROLLER_PARAMS: {
-          int temp = (msgIn->data[1] << 8u) + msgIn->data[0];
-          step_response.initialStep = degreesToMicroseconds(temp, currentSettings);
-          temp = (msgIn->data[3] << 8u) + msgIn->data[2];
-          step_response.finalStep = degreesToMicroseconds(temp, currentSettings);
+        case CMD_SET_PI_CONTROLLER_PARAMS: {
+          // int temp = (msgIn->data[1] << 8u) + msgIn->data[0];
+          // step_response.initialStep = degreesToMicroseconds(temp, currentSettings);
+          // temp = (msgIn->data[3] << 8u) + msgIn->data[2];
+          // step_response.finalStep = degreesToMicroseconds(temp, currentSettings);
+          
 
-          step_response.totalIterations = (msgIn->data[5]<< 8u) + msgIn->data[4];
-
-          servo_controller.Kp = bytesToFloatFromArray(msgIn->data, 6);
-          servo_controller.Ki = bytesToFloatFromArray(msgIn->data, 10);
+          servo_controller.Ki = bytesToFloatFromArray(msgIn->data, 0);
+          servo_controller.Kp = bytesToFloatFromArray(msgIn->data, 4);
+          servo_controller.Kd = bytesToFloatFromArray(msgIn->data, 8);
 
           #ifdef DEBUG
-          Serial.print(step_response.initialStep);
-          Serial.print("  ,");
-          Serial.print(step_response.finalStep);
-          Serial.print("  ,");
-          Serial.print(step_response.totalIterations);
-          Serial.print("  ,");
           Serial.print(servo_controller.Kp);
           Serial.print("  ,");
           Serial.print(servo_controller.Ki);
           Serial.print("  ,");
+          Serial.print(servo_controller.Kd);
+          Serial.print("  ,");
           Serial.print("pi params set");
           #endif
-          msgOut->data[0] = MOVE_PID;
+
+          servo_controller.pid_output = signalGen.initialValue;
+          servo_controller.pid_input = signalGen.initialValue;
+          servo_controller.setpoint_target = signalGen.initialValue;
+
+          
+          myPID.SetTunings(servo_controller.Kp, servo_controller.Ki, servo_controller.Kd);
+          myPID.SetSampleTime(servo_move_interval);
+          myPID.SetMode(AUTOMATIC);
+          myPID.SetOutputLimits(0, 140);
+
+          
+          msgOut->data[0] = CMD_MOVE_PID;
+          msgOut->dataLength = 1;
+          cycle_counter = 0;
+          uint16_t temp_pos = 1800 - round(signalGen.initialValue*10);
+          moveToPositionDeg2Microseconds(temp_pos, currentSettings);
+          
+
+        }
+        break;
+
+        case CMD_SET_INPUT_RESPONSE_PARAMS: {
+          SignalType type = STEP;
+          switch(msgIn->data[0]) {
+            case 1:
+              type = STEP;
+              break;
+            case 2:
+              type = RAMP;
+              break;
+            default:
+              type = STEP;
+              break;
+          }
+          initializeSignalGenerator(type);
+          
+          signalGen.initialValue = 180.0  - bytesToFloatFromArray(msgIn->data,1);
+          signalGen.finalValue = 180.0 - bytesToFloatFromArray(msgIn->data,5);
+          servo_controller.current_angle = signalGen.initialValue;
+
+          signalGen.totalIterations = msgIn->data[9];
+          signalGen.waitDuration = bytesToLongFromArray(msgIn->data,10);
+          signalGen.maxDuration = bytesToLongFromArray(msgIn->data,14);
+          signalGen.holdTime = bytesToLongFromArray(msgIn->data,18);
+
+          unsigned long quarterPeriod = signalGen.maxDuration / 4;  // Time for ramp up/down
+    
+          // Calculate ramp rate (units per millisecond)
+          float amplitude = signalGen.finalValue - signalGen.initialValue;
+          signalGen.rampRate = amplitude / signalGen.holdTime;  // This gives us the correct rate to reach finalValue in quarterPeriod
+          
+          // Calculate and print estimated cycle time
+          unsigned long rampTime = (signalGen.finalValue - signalGen.initialValue) / signalGen.rampRate;
+          Serial.print(F("Estimated cycle time: "));
+          Serial.print((rampTime * 2 + signalGen.holdTime) / 1000.0);
+          Serial.println(F(" seconds"));
+
+
+          #ifdef DEBUG
+          Serial.print(signalGen.initialValue);
+          Serial.print("  ,");
+          Serial.print(signalGen.finalValue);
+          Serial.print("  ,");
+          Serial.print(signalGen.totalIterations);
+          Serial.print("  ,");
+          Serial.print(signalGen.waitDuration);
+          Serial.print("  ,");
+          Serial.print(signalGen.maxDuration);
+          Serial.print("  ,");
+          Serial.print(signalGen.holdTime);
+          Serial.print("   input response params set");
+          #endif
+          msgOut->data[0] = CMD_MOVE_PID;
           msgOut->dataLength = 1;
         }
         break;
 
-        case START_PICONTROLLER: {
-          servo_controller.integral_error = 0;
-          servo_controller.pwm_target = step_response.initialStep,    
-          servo_controller.pwm_current = step_response.initialStep,   
-          servo_controller.velocity_current = 0, 
-          servo_controller.integral_error = 0, 
-          #ifdef DEBUG
-          Serial.print("start pi control");
-          #endif
-          msgOut->data[0] = MOVE_PID;
-          msgOut->dataLength = 1; 
+        case CMD_SET_COSINE_PARAMS: {
+            SignalType type = COSINE;
+            signalGen.type = type;
+            signalGen.initialValue = 180.0  - bytesToFloatFromArray(msgIn->data,1);
+            signalGen.finalValue = 180.0 - bytesToFloatFromArray(msgIn->data,5);
+            servo_controller.current_angle = signalGen.initialValue;
 
-          PI_programStarted = true;
-          startStepResponse();
+            signalGen.totalIterations = msgIn->data[9];
+            signalGen.waitDuration = bytesToLongFromArray(msgIn->data,10);
+            signalGen.maxDuration = bytesToLongFromArray(msgIn->data,14);
+            signalGen.holdTime = bytesToLongFromArray(msgIn->data,18);
+            
+
+            signalGen.amplitude = signalGen.finalValue - signalGen.initialValue;
+            signalGen.frequency = 1/(signalGen.maxDuration/1000.0);
+            signalGen.offset = signalGen.initialValue + (signalGen.amplitude/2);
+            signalGen.holdTime = 0;
+
+            #ifdef DEBUG
+            Serial.print(signalGen.initialValue);
+            Serial.print("  ,");
+            Serial.print(signalGen.finalValue);
+            Serial.print("  ,");
+            Serial.print(signalGen.amplitude);
+            Serial.print("  ,");
+            Serial.print(signalGen.frequency);
+            Serial.print("  ,");
+            Serial.print(signalGen.offset);
+            Serial.print("  ,");
+            Serial.print(signalGen.holdTime);
+            Serial.print("   cosine input response params set");
+            #endif
+            msgOut->data[0] = CMD_MOVE_PID;
+            msgOut->dataLength = 1;
+            
         }
         break;
 
-        case START_AQUISITION: {
+        case CMD_START_PICONTROLLER: {
+          changeLEDButtonColor(0x10);
+          servo_move_interval = 20;
+          servo_controller.integral_error = 0;
+          // servo_controller.pwm_target = step_response.finalStep;  
+          // servo_controller.pwm_current = step_response.finalStep;   
+          servo_controller.setpoint_target = signalGen.initialValue;
+          servo_controller.velocity_current = 0; 
+          servo_controller.integral_error = 0;
+          #ifdef DEBUG
+          Serial.print("start pi control");
+          #endif
+          msgOut->data[0] = CMD_MOVE_PID;
+          msgOut->dataLength = 1; 
+          servo_controller.pid_input = signalGen.initialValue;
+
+          PI_programStarted = true;
+          
+          SignalGenerator_start(&signalGen);
+          
+        }
+        break;
+
+        case CMD_START_AQUISITION: {
           // change state of stream
+          servo_move_interval = 20;
           switch(msgIn->data[0]) {
             case FORCE_MODE: {
               sensor_stream = true;
@@ -629,7 +790,7 @@ void changeModes(message *msgIn, message *msgOut){
               #ifdef DEBUG
               Serial.print("start force control");
               #endif
-              msgOut->data[0] = FORCE_STREAM;
+              msgOut->data[0] = CMD_FORCE_STREAM;
               msgOut->dataLength = 1;
             } break;
 
@@ -640,7 +801,7 @@ void changeModes(message *msgIn, message *msgOut){
               #ifdef DEBUG
               Serial.print("start mono-sensor emg_stream_increment control");
               #endif
-              msgOut->data[0] = MONO_EMG_STREAM;
+              msgOut->data[0] = CMD_MONO_EMG_STREAM;
               msgOut->dataLength = 1;
             } break;
 
@@ -651,7 +812,7 @@ void changeModes(message *msgIn, message *msgOut){
               #ifdef DEBUG
               Serial.print("start bi-sensor emg_stream_increment control");
               #endif
-              msgOut->data[0] = BI_EMG_STREAM;
+              msgOut->data[0] = CMD_BI_EMG_STREAM;
               msgOut->dataLength = 1;
             } break;
 
@@ -663,7 +824,7 @@ void changeModes(message *msgIn, message *msgOut){
               #ifdef DEBUG
               Serial.print("start imu stream");
               #endif
-              msgOut->data[0] = IMU_STREAM;
+              msgOut->data[0] = CMD_IMU_STREAM;
               msgOut->dataLength = 1;
             } break;
 
@@ -672,20 +833,25 @@ void changeModes(message *msgIn, message *msgOut){
               imu_stream = false;
               control_mode = 0x00;
               changeLEDButtonColor(0x00);  
-              msgOut->data[0] = STOP_AQUISITION;
+              msgOut->data[0] = CMD_STOP_AQUISITION;
             msgOut->dataLength = 1;        
           }
         }
         break;
 
-        case STOP_AQUISITION: {
+        case CMD_STOP_AQUISITION: {
           sensor_stream = false;
           imu_stream = false;
+          zero_servo = false;
+          pid_stream = false;
+          PI_programStarted = false;
           control_mode = 0x00;
-          changeLEDButtonColor(0x00); 
-          msgOut->data[0] = STOP_AQUISITION;
+          // changeLEDButtonColor(0x10); 
+          msgOut->data[0] = CMD_STOP_AQUISITION;
           msgOut->dataLength = 1;
+          #ifdef DEBUG
           Serial.println("stream stopped");
+          #endif
         }
         break;
 
@@ -717,6 +883,12 @@ void storeByteInBigBuffer(byte data_byte) {
 
 float bytesToFloatFromArray(byte* array, int startIndex) {
   float result;
+  memcpy(&result, &array[startIndex], 4);
+  return result;
+}
+
+unsigned long bytesToLongFromArray(byte* array, int startIndex) {
+  unsigned long result;
   memcpy(&result, &array[startIndex], 4);
   return result;
 }

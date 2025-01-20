@@ -2,33 +2,82 @@ classdef CommunicationManager < handle
     properties (Access = public)
         connectedDevice
         config
+        % defines for communication protocol
+        startMarker = 0x3C;
+        endMarker = 0x3E;
+        header = 0xFF; %binary: 1111 1111, dec: 255
+        force_header = 0x8F;
+        max_data_length = 200;
+        data = [];
+        BAUDrate = 115200;
     end
 
     methods
-        function obj = CommunicationManager(connectedDevice, config)
-            obj.connectedDevice = connectedDevice;
-            obj.config = config;
-        end
-
-        function success = resetConnection(obj)
-            success = false; 
-            % Close the connected device if it's open
-            if ~isempty(obj.connectedDevice) && isvalid(obj.connectedDevice)
-                if obj.connectedDevice.Status == "open"
-                    flush(obj.connectedDevice);
-                    configureCallback(obj.connectedDevice, "off");
-                    delete(obj.connectedDevice);
-                end
+        function obj = CommunicationManager(portName)
+            if nargin < 1
+                error('Port name must be specified');
             end
 
-            % Reset properties
-            obj.connectedDevice = [];
-            obj.config = struct();
+            % Initialize config
+            obj.config = struct(...
+                'max_data_length', obj.max_data_length, ...
+                'header', obj.header, ...
+                'startMarker', obj.startMarker, ...
+                'endMarker', obj.endMarker, ...
+                'baudRate', obj.BAUDrate, ...
+                'timeout', 1 ...
+            );
 
-            success = true;
-            disp('Connection reset successfully');
+            obj.establishConnection(portName);
+
+             
         end
 
+        function success = establishConnection(obj, portName)
+            %  Establishes serial connection with specified settings
+            success = false;
+            
+            try
+                % Clean up any existing connection first
+                obj.cleanup();
+                
+                % Create and configure new serial connection
+                obj.connectedDevice = serialport(portName, obj.config.baudRate, "Timeout",obj.config.timeout);
+                warning('OFF','serialport:serialport:ReadWarning')
+                
+                % Flush any existing data
+                flush(obj.connectedDevice);
+                
+                success = true;
+                disp(['Successfully connected to ' portName]);
+            catch ME
+                error('Failed to establish connection: %s', ME.message);
+            end
+        end
+
+        function cleanup(obj)
+            % CLEANUP Properly closes and cleans up the serial connection
+            try
+                if ~isempty(obj.connectedDevice) && isvalid(obj.connectedDevice)
+                    if obj.connectedDevice.Status == "open"
+                        % Disable any callbacks
+                        configureCallback(obj.connectedDevice, "off");
+                        
+                        % Flush the device
+                        flush(obj.connectedDevice);
+                        pause(0.1); % Small delay to ensure flush completes
+                        
+                        % Delete the device
+                        delete(obj.connectedDevice);
+                    end
+                    disp('Serial connection cleaned up successfully');
+                end
+                obj.connectedDevice = [];
+                
+            catch ME
+                warning(ME.identifier, 'Error during cleanup: %s', ME.message);
+            end
+        end
 
         function sendCommand(obj, opcode, dataLength, data)
             % SENDCOMMAND Sends a command/data package to Arduino via Serial Port Connection
@@ -84,6 +133,7 @@ classdef CommunicationManager < handle
             message2receive = struct('header',0,'opcode',0,'dataLength',0,'data',0,'checksum',0);
             % receive!
             try
+            
                 temp = read(obj.connectedDevice,1, 'uint8');
                 % tic
                 while((temp ~= obj.config.startMarker))
@@ -102,6 +152,7 @@ classdef CommunicationManager < handle
                     message_type = 'CMD';
                     reply = message2receive.opcode;
                     data = uint8(message2receive.data);
+                    disp(tEnd);
                     return
                 end
                 % toc
@@ -159,6 +210,7 @@ classdef CommunicationManager < handle
                     %error('wrong checksum of message!')
                 
                 end
+                
                 
             catch e
                 if exist('self.connected_device','var')

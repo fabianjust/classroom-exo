@@ -11,7 +11,7 @@ sensorData mySensors;
 void setup() {
   initializeCommunication();
   initializeHardware();
-  initBatteryVoltage(&myBat);
+  initializeBatteryBuffer(&myBat);
   initializeLED();
   getDeviceName();
   initializeSensors(&mySensors);
@@ -36,13 +36,13 @@ void loop() {
     }
   }
 
-  processPIDTrajectory();
+  // processPIDTrajectory();
 
 
 
-  processServoResetting();
+  // processServoResetting();
 
-  // pi_handler();
+  pi_handler();
   
 
   handleIMUStream(imu_stream);

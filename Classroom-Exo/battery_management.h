@@ -12,7 +12,7 @@
 #include "messaging.h"
 
 /// @brief Upper limit for high battery voltage warning (in millivolts)
-const float HIGH_BAT_LIMIT_WARNING = 7600;
+const float HIGH_BAT_LIMIT_WARNING = 7400;
 
 /// @brief Upper limit for medium battery voltage warning (in millivolts)
 const float MED_BAT_LIMIT_WARNING = 7200;
@@ -21,13 +21,13 @@ const float MED_BAT_LIMIT_WARNING = 7200;
 const float LOW_BAT_LIMIT_WARNING = 6800;
 
 /// @brief Critical battery voltage limit for warning (in millivolts)
-const float BAT_LIMIT_WARNING = 6200;
+const float BAT_LIMIT_WARNING = 6400;
 
 /// @brief Current battery voltage in millivolts
 extern float bat_mvolt;
 
 /// @brief  intervall for polling battery voltage
-const uint8_t POLL_INTERVALL = 10000;
+const unsigned long POLL_INTERVALL = 1000;
 
 /// @brief  window size for moving average filtered battery voltage
 const uint8_t BAT_WINDOW_SIZE = 10;
@@ -49,29 +49,31 @@ extern BatteryVoltage myBat;
 
 /**
  * @brief Initializes a BatteryVoltage structure.
- *
  * @param data Pointer to the BatteryVoltage structure to initialize.
  */
 void initBatteryVoltage(BatteryVoltage *data);
 
 /**
- * @brief Check the current battery voltage and update LED Button status
- * 
+ * @brief Fills Battery Voltage  Buffer with initial values from the sensor.
+ * @param data Pointer to the BatteryVoltage structure to initialize.
+ */
+void initializeBatteryBuffer(BatteryVoltage *bat_data);
+
+/**
+ * @brief Check the current battery voltage and update LED Button status 
  * @return Current battery voltage in millivolts
  */
 void pollBatteryVoltage(BatteryVoltage* bat_mvolt);
 
 /**
  * @brief Updates the moving average with a new voltage sample.
- *
  * @param bv Pointer to the BatteryVoltage structure to update.
  * @param newVoltage The new voltage sample to add to the moving average.
  */
 void updateMovingAverage(BatteryVoltage *bv, float newVoltage);
 
 /**
- * @brief Read the current battery voltage
- * 
+ * @brief Read the current battery voltage 
  * @return Current battery voltage in millivolts
  */
 float readBatteryVoltage();

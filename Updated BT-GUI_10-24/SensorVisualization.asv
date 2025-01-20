@@ -1,0 +1,244 @@
+classdef SensorVisualization < handle
+    properties
+        Axes
+        WindowSize
+        RawLine
+        FilteredLine
+        ThresholdLines
+        Thresholds
+        ShowThresholds
+        FilterType % 'centered', 'leftsided', 'ewma'
+        PlotConfig % Struct for plot-specific configurations
+        DataFilter
+        
+    end
+
+    properties (Constant)
+        % Define filter modes as a constant property
+        FilterModes = struct(...
+            'FastResponse', 5,    ... % 250ms window
+            'Balanced', 20,       ... % 1s window
+            'Smooth', 40,         ... % 2s window
+            'CurrentMode', 'Balanced'  ... % Default mode
+        )
+    end
+
+    methods (Access = public)
+        function obj = SensorVisualization(ax, sensorType, varargin)
+            obj.Axes = ax;
+            obj.ShowThresholds = false;
+            obj.WindowSize = obj.FilterModes.Balanced;  % Default to balanced mode
+            obj.FilterType = 'leftsided';
+            obj.ThresholdLines = [];
+            obj.Thresholds = [];
+            
+            % Parse optional parameters
+            p = inputParser;
+            validModes = {'FastResponse', 'Balanced', 'Smooth'};
+            checkMode = @(x) any(strcmp(x, validModes));
+            
+            addParameter(p, 'FilterMode', 'Balanced', checkMode);  % Use FilterMode instead of WindowSize
+            addParameter(p, 'FilterType', 'centered');  % Default filter type
+            addParameter(p, 'YLabel', '');
+            addParameter(p, 'Title', '');
+            addParameter(p, 'MaxPoints', 400);
+            parse(p, varargin{:});
+
+            % Initialize the data filter
+            % Set window size based on mode
+            obj.WindowSize = obj.FilterModes.(p.Results.FilterMode);
+            obj.FilterType = p.Results.FilterType;
+            
+            % Initialize filter with selected window size
+            obj.DataFilter = SensorFilter(obj.WindowSize);
+            
+            % Set configuration based on sensor type
+            obj.configurePlot(sensorType, p.Results);
+            obj.initializePlot();
+        end
+
+        function setFilterMode(obj,type, mode)
+            % Dynamically change filter window size
+            if isfield(obj.FilterModes, mode)
+                obj.WindowSize = obj.FilterModes.(mode);
+                obj.DataFilter = SensorFilter(obj.WindowSize);
+                obj.FilterType = type;
+            else
+                error('Invalid filter mode. Use FastResponse, Balanced, or Smooth');
+            end
+        end
+
+        function configurePlot(obj, sensorType, config)
+            % Default configurations for different sensor types
+            switch lower(sensorType)
+                case 'force'
+                    obj.PlotConfig = struct(...
+                        'YLabel', 'Force (mN)', ...
+                        'Title', 'Force Reading', ...
+                        'RawLineStyle', '--', ...
+                        'RawColor', 'red', ...
+                        'FilteredColor', 'black', ...
+                        'ThresholdColor', 'blue', ...
+                        'MaxPoints', 400, ...
+                        'YLimits', [-1000 1000], ...
+                        'ConversionFactor', 17); % mN conversion
+                    
+                case 'emg'
+                    obj.PlotConfig = struct(...
+                        'YLabel', 'EMG (mV)', ...
+                        'Title', 'EMG Signal', ...
+                        'RawLineStyle', '-', ...
+                        'RawColor', 'red', ...
+                        'FilteredColor', 'black', ...
+                        'ThresholdColor', 'blue', ...
+                        'MaxPoints', 400, ...
+                        'YLimits', [0 400], ...
+                        'ConversionFactor', 1);
+                otherwise
+                    error('Unsupported sensor type: %s', sensorType);
+            end
+
+            % Override defaults with provided configurations
+            if ~isempty(config.YLabel)
+                obj.PlotConfig.YLabel = config.YLabel;
+            end
+            if ~isempty(config.Title)
+                obj.PlotConfig.Title = config.Title;
+            end
+            % obj.WindowSize = config.WindowSize;
+            % obj.FilterType = config.FilterType;
+            obj.PlotConfig.MaxPoints = config.MaxPoints;
+        end
+
+        function initializePlot(obj)
+            cla(obj.Axes, "reset");
+            
+            % Setup axes
+            obj.Axes.XLim = [0 400];
+            if isfield(obj.PlotConfig, 'YLimits')
+                obj.Axes.YLim = obj.PlotConfig.YLimits;
+            end
+            % Calculate appropriate time step for x-ticks
+            tickStep = 10;
+            tickInterval = 1*tickStep;
+            startTick = 0;
+            endTick = 400;
+            ticks = ceil(startTick / tickInterval) * tickInterval : tickInterval : endTick;
+            
+            obj.Axes.XTick = ticks;
+            obj.Axes.XTickLabel = arrayfun(@(t) sprintf('%.1f', t), ticks./tickStep, 'UniformOutput', false);
+            
+            obj.Axes.NextPlot = 'add';
+            obj.Axes.YLabel.String = obj.PlotConfig.YLabel;
+            obj.Axes.Title.String = obj.PlotConfig.Title;
+            obj.Axes.YGrid = 'on';
+            
+            % Create animated lines
+            obj.RawLine = animatedline(obj.Axes, ...
+                'Color', obj.PlotConfig.RawColor, ...
+                'LineStyle', obj.PlotConfig.RawLineStyle, ...
+                'MaximumNumPoints', obj.PlotConfig.MaxPoints);
+            
+            obj.FilteredLine = animatedline(obj.Axes, ...
+                'Color', obj.PlotConfig.FilteredColor, ...
+                'MaximumNumPoints', obj.PlotConfig.MaxPoints);
+            
+            % Initialize legend
+            if obj.ShowThresholds
+                obj.updateThresholdLines();
+            end
+            obj.updateLegend();
+            
+            hold(obj.Axes, "off");
+        end
+
+        function setThresholds(obj, thresholds)
+            obj.Thresholds = thresholds;
+            if obj.ShowThresholds
+                obj.updateThresholdLines();
+            end
+        end
+
+        function setShowThresholds(obj, show)
+            obj.ShowThresholds = show;
+            if show
+                obj.updateThresholdLines();
+            else
+                if ~isempty(obj.ThresholdLines)
+                    delete([obj.ThresholdLines{:}]);
+                    obj.ThresholdLines = [];
+                end
+            end
+            obj.updateLegend();
+        end
+
+        function filtered_data = filterData(obj, raw_data)
+            % Now uses the buffer-based filter
+            obj.FilterType
+            filtered_data = obj.DataFilter.filterData(raw_data, obj.FilterType);
+        end
+
+        function update(obj, counter, raw_data, filtered_data)
+            % Convert data using sensor-specific conversion factor
+            raw_data = raw_data * obj.PlotConfig.ConversionFactor;
+            filtered_data = filtered_data * obj.PlotConfig.ConversionFactor;
+            
+            % Update plots
+            if size(raw_data,1) > 1
+                addpoints(obj.RawLine, counter, raw_data);
+                addpoints(obj.FilteredLine, counter, filtered_data);
+            else
+                addpoints(obj.RawLine, counter, )
+            
+            % Adjust x-axis limits if necessary
+            if counter > obj.PlotConfig.MaxPoints
+                xlim(obj.Axes, [max(0, counter - obj.PlotConfig.MaxPoints), counter+50]);
+                startTick = max(0, counter - obj.PlotConfig.MaxPoints);
+                endTick = counter+50;
+            else
+                obj.Axes.XLim = [0, 400];  % Show first 400 points
+                startTick = 0;
+                endTick = 400;
+            end
+
+            % Calculate appropriate time step for x-ticks
+            tickStep = 10;
+            tickInterval = 1*tickStep;
+            
+            ticks = ceil(startTick / tickInterval) * tickInterval : tickInterval : endTick;
+            
+            obj.Axes.XTick = ticks;
+            obj.Axes.XTickLabel = arrayfun(@(t) sprintf('%.1f', t), ticks./tickStep, 'UniformOutput', false);
+
+            drawnow limitrate;
+        end
+    end
+
+    methods (Access = private)
+        function updateThresholdLines(obj)
+            if ~isempty(obj.ThresholdLines)
+                delete([obj.ThresholdLines{:}]);
+            end
+            obj.ThresholdLines = cell(size(obj.Thresholds));
+            for i = 1:length(obj.Thresholds)
+                obj.ThresholdLines{i} = yline(obj.Axes, obj.Thresholds(i), ...
+                    'Color', obj.PlotConfig.ThresholdColor);
+            end
+        end
+
+        function updateLegend(obj)
+            legendItems = [obj.RawLine, obj.FilteredLine];
+            legendLabels = {'Raw', 'Filtered'};
+            
+            if obj.ShowThresholds && ~isempty(obj.ThresholdLines)
+                legendItems = [legendItems, [obj.ThresholdLines{:}]];
+                for i = 1:length(obj.ThresholdLines)
+                    legendLabels{end+1} = sprintf('Threshold %d', i);
+                end
+            end
+            
+            legend(obj.Axes, legendItems, legendLabels, 'Location', 'northeast');
+        end
+    end
+
+end
