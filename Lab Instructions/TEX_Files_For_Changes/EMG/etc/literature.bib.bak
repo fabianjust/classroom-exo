@@ -1,0 +1,70 @@
+% Encoding: UTF-8
+
+@Article{AlTashi2024,
+  author    = {Al-Tashi, Mohammed and Lennartson, Bengt and Ortiz-Catalan, Max and Just, Fabian},
+  journal   = {at - Automatisierungstechnik},
+  title     = {Classroom-ready open-source educational exoskeleton for biomedical and control engineering},
+  year      = {2024},
+  issn      = {2196-677X},
+  month     = may,
+  number    = {5},
+  pages     = {460--475},
+  volume    = {72},
+  doi       = {10.1515/auto-2023-0208},
+  publisher = {Walter de Gruyter GmbH},
+}
+
+@Article{Hill2017,
+  author    = {Hill, Deborah and Holloway, Catherine Sarah and Morgado Ramirez, Dafne Zuleima and Smitham, Peter and Pappas, Yannis},
+  journal   = {International Journal of Technology Assessment in Health Care},
+  title     = {WHAT ARE USER PERSPECTIVES OF EXOSKELETON TECHNOLOGY? A LITERATURE REVIEW},
+  year      = {2017},
+  issn      = {1471-6348},
+  number    = {2},
+  pages     = {160--167},
+  volume    = {33},
+  doi       = {10.1017/s0266462317000460},
+  publisher = {Cambridge University Press (CUP)},
+}
+
+@Misc{MyoWare,
+  title    = {{MyoWare} {Muscle} {Sensor} {Kit}},
+  abstract = {The MyoWare™ Muscle Sensor is the latest electromyography (EMG) sensor from Advancer Technologies.},
+  language = {en-at},
+  url      = {https://www.digikey.at/en/maker/projects/myoware-muscle-sensor-kit/39ecba5502ad4c59ad0f7eca25b6e338},
+  urldate  = {2025-01-27},
+}
+
+@Misc{Walden2022,
+  author   = {Walden, Mike},
+  month    = aug,
+  title    = {The {Calf} {Muscles}},
+  year     = {2022},
+  abstract = {The calf muscles consist of the gastrocnemius and soleus muscles at the back of the lower leg. Together they plantar flex the ankle.},
+  journal  = {Sportsinjuryclinic.net},
+  language = {en-US},
+  url      = {https://www.sportsinjuryclinic.net/anatomy/the-calf-muscles},
+  urldate  = {2025-01-27},
+}
+
+@Misc{Muscles,
+  title    = {Arm {Muscles} {Anterior} {Compartment} {Labeled} {Stock} {Illustration} 229583701},
+  abstract = {Find Arm Muscles Anterior Compartment Labeled stock images in HD and millions of other royalty-free stock photos, 3D objects, illustrations and vectors in the Shutterstock collection.  Thousands of new, high-quality pictures added every day.},
+  journal  = {Shutterstock},
+  language = {en},
+  url      = {https://www.shutterstock.com/image-illustration/arm-muscles-anterior-compartment-labeled-229583701},
+  urldate  = {2025-01-27},
+}
+
+@Book{Lennartson2002,
+  author    = {Bengt Lennartson},
+  publisher = {Studentliteratur AB},
+  title     = {Reglerteknikens grunder},
+  year      = {2002},
+  abstract  = {Författare: Lennartson, Bengt, Kategori: Bok, Sidantal: 528, Pris: 465 kr exkl. moms},
+  language  = {sv},
+  url       = {https://www.studentlitteratur.se/kurslitteratur/teknik/reglerteknik/reglerteknikens-grunder/},
+  urldate   = {2025-01-27},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

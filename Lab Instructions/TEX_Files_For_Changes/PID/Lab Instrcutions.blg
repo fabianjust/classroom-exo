@@ -1,0 +1,15 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'Lab Instrcutions.blg'
+[164] biber-MSWIN64:340> INFO - === 
+[226] Biber.pm:415> INFO - Reading 'Lab Instrcutions.bcf'
+[392] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
+[411] Biber.pm:4340> INFO - Processing section 0
+[428] Biber.pm:4531> INFO - Looking for bibtex format file 'etc/literature.bib' for section 0
+[518] bibtex.pm:1689> INFO - LaTeX decoding ...
+[546] bibtex.pm:1494> INFO - Found BibTeX data source 'etc/literature.bib'
+[619] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[619] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[619] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[619] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[630] bbl.pm:654> INFO - Writing 'Lab Instrcutions.bbl' with encoding 'UTF-8'
+[633] bbl.pm:757> INFO - Output to Lab Instrcutions.bbl

@@ -1,0 +1,111 @@
+% =========================================================
+% Colorful listings
+%
+% Needed: \uspackage{listings, xcolor}
+% =========================================================
+
+\lstdefinestyle{cpp}{
+	language=C++,
+	keepspaces=true,
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\itshape\color{gray}\ttfamily,
+	morecomment=[l][\color{red}]{\#},
+	numbers=left,
+	numberstyle={\tiny \color{gray}},% size of the numbers
+	frame=single,
+	breaklines=true,
+	tabsize=4
+}
+\lstdefinestyle{asm}{
+	language=[x86masm]Assembler,
+	keepspaces=true,
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\itshape\color{gray}\ttfamily,
+	numbers=left,
+	numberstyle={\tiny \color{gray}},% size of the numbers
+	frame=single,
+	breaklines=true,
+	tabsize=4,
+}
+\lstdefinestyle{c}{
+	language=C,
+	keepspaces=true,
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\itshape\color{gray}\ttfamily,
+	numbers=left,
+	numberstyle={\tiny \color{gray}},% size of the numbers
+	frame=single,
+	breaklines=true,
+	tabsize=4,
+}
+\lstdefinestyle{shell}{
+	language=sh,
+	keepspaces=true,
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\color{red}\ttfamily,
+	keywordstyle=[1]{\bfseries\color{black}},
+	morekeywords={sudo, mkdir, cp},
+	stringstyle=\color{gray}\ttfamily,
+	commentstyle=\itshape\color{gray}\ttfamily,
+	% morecomment=[l][\color{red}]{\#},
+	numbers=left,
+	numberstyle={\tiny \color{gray}},% size of the numbers
+	frame=single,
+	breaklines=true
+}
+\lstdefinestyle{matlab}{
+	language=Matlab,%
+	breaklines=true,%
+	frame=single,%
+	morekeywords={matlab2tikz},
+	morekeywords={xlim,ylim,var,alpha,factorial,poissrnd,normpdf,normcdf,audioread},
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=[1]{\bfseries\color{black}},        % MATLAB functions bold and blue
+	keywordstyle=[2]{\bfseries\color{black}},         % MATLAB function arguments purple
+	keywordstyle=[3]{\color{Blue}\underbar},     % User functions underlined and blue
+	tabsize=5,                              % 5 spaces per tab
+	identifierstyle=\color{black},%
+	stringstyle=\color{purple},
+	commentstyle=\color{gray},%
+	showstringspaces=false,%without this there will be a symbol in the places where there is a space
+	numbers=left,%
+	numberstyle={\tiny \color{gray}},% size of the numbers
+	numbersep=9pt, % this defines how far the numbers are from the text
+	emph=[1]{for,end,break},emphstyle=[1]\color{blue}, %some words to emphasise
+}
+\lstdefinestyle{matlabInLine}{
+	identifierstyle=\color{blue},%
+	language=Matlab,%
+	basicstyle=\ttfamily\footnotesize,
+	stringstyle=\color{purple},
+	emph=[1]{for,end,break},emphstyle=[1]\color{blue}, %some words to emphasise,
+}
+
+% Deutsche Sonderzeichen in Listing
+\lstset{
+	frame=singe,
+	basicstyle=\footnotesize\ttfamily,
+	breaklines=true,
+	numbers=left,
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={ä}{{\"a}}1 {ö}{{\"o}}1 {ü}{{\"u}}1,
+}
+
+% Linebreaks im \texttt erlauben bei []/.
+\renewcommand{\texttt}[1]{%
+	\begingroup
+	\ttfamily
+	\begingroup\lccode`~=`/\lowercase{\endgroup\def~}{/\discretionary{}{}{}}%
+	\begingroup\lccode`~=`[\lowercase{\endgroup\def~}{[\discretionary{}{}{}}%
+	\begingroup\lccode`~=`.\lowercase{\endgroup\def~}{.\discretionary{}{}{}}%
+	\catcode`/=\active\catcode`[=\active\catcode`.=\active
+	\scantokens{#1\noexpand}%
+	\endgroup
+}

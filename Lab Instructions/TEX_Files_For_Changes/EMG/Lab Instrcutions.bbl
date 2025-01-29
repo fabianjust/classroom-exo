@@ -1,0 +1,187 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Muscles}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Find Arm Muscles Anterior Compartment Labeled stock images in HD and millions of other royalty-free stock photos, 3D objects, illustrations and vectors in the Shutterstock collection. Thousands of new, high-quality pictures added every day.}
+      \field{journaltitle}{Shutterstock}
+      \field{title}{Arm {Muscles} {Anterior} {Compartment} {Labeled} {Stock} {Illustration} 229583701}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.shutterstock.com/image-illustration/arm-muscles-anterior-compartment-labeled-229583701
+      \endverb
+      \verb{url}
+      \verb https://www.shutterstock.com/image-illustration/arm-muscles-anterior-compartment-labeled-229583701
+      \endverb
+    \endentry
+    \entry{Hill2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=46432f58b0781b0c583fdf494f8592d6}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Deborah},
+           giveni={D\bibinitperiod}}}%
+        {{hash=91cf115bd90dbe066a4db5b05a77badd}{%
+           family={Holloway},
+           familyi={H\bibinitperiod},
+           given={Catherine\bibnamedelima Sarah},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=42c1d5ad7b932f7af5184515d333fda6}{%
+           family={Morgado\bibnamedelima Ramirez},
+           familyi={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Dafne\bibnamedelima Zuleima},
+           giveni={D\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=5ae0ab0e2243203e0bf80fa051af0738}{%
+           family={Smitham},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5fc2653551d70bbcae24b14c427e1520}{%
+           family={Pappas},
+           familyi={P\bibinitperiod},
+           given={Yannis},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press (CUP)}%
+      }
+      \strng{namehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{fullhash}{bbaaf02b44ba89f3181c23d61e93d236}
+      \strng{bibnamehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{authorbibnamehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{authornamehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{authorfullhash}{bbaaf02b44ba89f3181c23d61e93d236}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1471-6348}
+      \field{journaltitle}{International Journal of Technology Assessment in Health Care}
+      \field{number}{2}
+      \field{title}{WHAT ARE USER PERSPECTIVES OF EXOSKELETON TECHNOLOGY? A LITERATURE REVIEW}
+      \field{volume}{33}
+      \field{year}{2017}
+      \field{pages}{160\bibrangedash 167}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1017/s0266462317000460
+      \endverb
+    \endentry
+    \entry{AlTashi2024}{article}{}
+      \name{author}{4}{}{%
+        {{hash=e8caf28dd0d892b5ceb16cd6736f1447}{%
+           family={Al-Tashi},
+           familyi={A\bibinithyphendelim T\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3152088dd3b6312c45d463e29ae21ca0}{%
+           family={Lennartson},
+           familyi={L\bibinitperiod},
+           given={Bengt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5ca3520d8a030aaaf143a0bc4c3bc379}{%
+           family={Ortiz-Catalan},
+           familyi={O\bibinithyphendelim C\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=14b66f7a9cbc720344b525cc732f4f80}{%
+           family={Just},
+           familyi={J\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter GmbH}%
+      }
+      \strng{namehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{fullhash}{16f9473b19245082966634ae84f8b836}
+      \strng{bibnamehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{authorbibnamehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{authornamehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{authorfullhash}{16f9473b19245082966634ae84f8b836}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2196-677X}
+      \field{journaltitle}{at - Automatisierungstechnik}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Classroom-ready open-source educational exoskeleton for biomedical and control engineering}
+      \field{volume}{72}
+      \field{year}{2024}
+      \field{pages}{460\bibrangedash 475}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1515/auto-2023-0208
+      \endverb
+    \endentry
+    \entry{Walden2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3d8ce6e6fde1e54dbee23110692e8e52}{%
+           family={Walden},
+           familyi={W\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \strng{namehash}{3d8ce6e6fde1e54dbee23110692e8e52}
+      \strng{fullhash}{3d8ce6e6fde1e54dbee23110692e8e52}
+      \strng{bibnamehash}{3d8ce6e6fde1e54dbee23110692e8e52}
+      \strng{authorbibnamehash}{3d8ce6e6fde1e54dbee23110692e8e52}
+      \strng{authornamehash}{3d8ce6e6fde1e54dbee23110692e8e52}
+      \strng{authorfullhash}{3d8ce6e6fde1e54dbee23110692e8e52}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The calf muscles consist of the gastrocnemius and soleus muscles at the back of the lower leg. Together they plantar flex the ankle.}
+      \field{journaltitle}{Sportsinjuryclinic.net}
+      \field{month}{8}
+      \field{title}{The {Calf} {Muscles}}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sportsinjuryclinic.net/anatomy/the-calf-muscles
+      \endverb
+      \verb{url}
+      \verb https://www.sportsinjuryclinic.net/anatomy/the-calf-muscles
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{AlTasih2024}
+  \missing{Myoware}
+\endrefsection
+\endinput
+

@@ -1,0 +1,37 @@
+% =========================================================
+% Define the main document style and font
+%
+% This syle mainly inherits from the templaye avalilable
+% in Moddle, by DAndexer, SEntacher
+%
+% TODO: use fancyhdr
+% =========================================================
+
+\ifdefined\withTimesNewRoman
+% Set font to Times New Roman. Note that fontspec requires lualatex or xelatex.
+% Requires ttf-mscorefonts-installer on Debian.
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\fi
+
+\usepackage{a4wide}
+
+%Seitenraender/Zeilenabstand
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=4cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\headheight}{18pt}
+\setlength{\parskip}{5pt plus 2pt minus 1pt}
+%\setcellgapes{3pt}
+
+%Formatierung der Fussnote
+%\usepackage[bottom,hang]{footmisc}
+
+%Formatierung für Kopfzeile
+\usepackage[headsepline,automark]{scrlayer-scrpage} 
+\setlength{\headsep}{15mm}
+\clearpairofpagestyles 
+\ihead{\headmark}
+\ohead{\pagemark}
+\addtolength{\topmargin}{1\baselineskip}

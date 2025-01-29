@@ -1,0 +1,325 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Dickmann2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=8d0ff83b9cad9cf843952267939a4c6d}{%
+           family={Dickmann},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=af1a145aed17f3bf3441e18ff4ba86bb}{%
+           family={Wilhelm},
+           familyi={W\bibinitperiod},
+           given={Nikolas\bibnamedelima J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a8a2b04eb3cbf5d522756d4cd6700498}{%
+           family={Glowalla},
+           familyi={G\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1eeed5190ecef27eb5b83d595cd48d5f}{%
+           family={Haddadin},
+           familyi={H\bibinitperiod},
+           given={Sami},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2118bde20d3b527fd70b3f0c5e339130}{%
+           family={Smagt},
+           familyi={S\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=d422d7e45fe3782f3c18f9cbd2556a38}{%
+           family={Burgkart},
+           familyi={B\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Frontiers Media SA}%
+      }
+      \strng{namehash}{126c50ad6a957d8f1c7b3a7125ccfb1c}
+      \strng{fullhash}{10d366b85cdb71ce14b330ff4bb54cba}
+      \strng{bibnamehash}{126c50ad6a957d8f1c7b3a7125ccfb1c}
+      \strng{authorbibnamehash}{126c50ad6a957d8f1c7b3a7125ccfb1c}
+      \strng{authornamehash}{126c50ad6a957d8f1c7b3a7125ccfb1c}
+      \strng{authorfullhash}{10d366b85cdb71ce14b330ff4bb54cba}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2296-9144}
+      \field{journaltitle}{Frontiers in Robotics and AI}
+      \field{month}{9}
+      \field{title}{An Adaptive Mechatronic Exoskeleton for Force-Controlled Finger Rehabilitation}
+      \field{volume}{8}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.3389/frobt.2021.716451
+      \endverb
+    \endentry
+    \entry{Falkowski2024}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0d6d032241259120d2a06f7c714a5074}{%
+           family={Falkowski},
+           familyi={F\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod}}}%
+        {{hash=71f6fb21f82bb60532fbefb9f59dbaf0}{%
+           family={Jeznach},
+           familyi={J\bibinitperiod},
+           given={Kajetan},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{34e1a1880c97b312cda6aec9c805c259}
+      \strng{fullhash}{34e1a1880c97b312cda6aec9c805c259}
+      \strng{bibnamehash}{34e1a1880c97b312cda6aec9c805c259}
+      \strng{authorbibnamehash}{34e1a1880c97b312cda6aec9c805c259}
+      \strng{authornamehash}{34e1a1880c97b312cda6aec9c805c259}
+      \strng{authorfullhash}{34e1a1880c97b312cda6aec9c805c259}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1743-0003}
+      \field{journaltitle}{Journal of NeuroEngineering and Rehabilitation}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{Simulation of a control method for active kinesiotherapy with an upper extremity rehabilitation exoskeleton without force sensor}
+      \field{volume}{21}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1186/s12984-024-01316-x
+      \endverb
+    \endentry
+    \entry{Golabchi2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=518560411dedb1196fd88d7a87dfaf7c}{%
+           family={Golabchi},
+           familyi={G\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=37c524adfc5eacdda8e570d4a35a0a52}{%
+           family={Chao},
+           familyi={C\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8824d822d9401ecfda06a083c4d750e6}{%
+           family={Tavakoli},
+           familyi={T\bibinitperiod},
+           given={Mahdi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{e0ea9c12ca134006dc37098904e01918}
+      \strng{fullhash}{e0ea9c12ca134006dc37098904e01918}
+      \strng{bibnamehash}{e0ea9c12ca134006dc37098904e01918}
+      \strng{authorbibnamehash}{e0ea9c12ca134006dc37098904e01918}
+      \strng{authornamehash}{e0ea9c12ca134006dc37098904e01918}
+      \strng{authorfullhash}{e0ea9c12ca134006dc37098904e01918}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1424-8220}
+      \field{journaltitle}{Sensors}
+      \field{month}{4}
+      \field{number}{7}
+      \field{title}{A Systematic Review of Industrial Exoskeletons for Injury Prevention: Efficacy Evaluation Metrics, Target Tasks, and Supported Body Postures}
+      \field{volume}{22}
+      \field{year}{2022}
+      \field{pages}{2714}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/s22072714
+      \endverb
+    \endentry
+    \entry{Hill2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=46432f58b0781b0c583fdf494f8592d6}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Deborah},
+           giveni={D\bibinitperiod}}}%
+        {{hash=91cf115bd90dbe066a4db5b05a77badd}{%
+           family={Holloway},
+           familyi={H\bibinitperiod},
+           given={Catherine\bibnamedelima Sarah},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=42c1d5ad7b932f7af5184515d333fda6}{%
+           family={Morgado\bibnamedelima Ramirez},
+           familyi={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Dafne\bibnamedelima Zuleima},
+           giveni={D\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=5ae0ab0e2243203e0bf80fa051af0738}{%
+           family={Smitham},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5fc2653551d70bbcae24b14c427e1520}{%
+           family={Pappas},
+           familyi={P\bibinitperiod},
+           given={Yannis},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press (CUP)}%
+      }
+      \strng{namehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{fullhash}{bbaaf02b44ba89f3181c23d61e93d236}
+      \strng{bibnamehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{authorbibnamehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{authornamehash}{e9bd94a736e44feea80870aa8b11854e}
+      \strng{authorfullhash}{bbaaf02b44ba89f3181c23d61e93d236}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1471-6348}
+      \field{journaltitle}{International Journal of Technology Assessment in Health Care}
+      \field{number}{2}
+      \field{title}{WHAT ARE USER PERSPECTIVES OF EXOSKELETON TECHNOLOGY? A LITERATURE REVIEW}
+      \field{volume}{33}
+      \field{year}{2017}
+      \field{pages}{160\bibrangedash 167}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1017/s0266462317000460
+      \endverb
+    \endentry
+    \entry{Lang2022}{article}{}
+      \name{author}{6}{}{%
+        {{hash=8d928a8e9af99aa5ff6b991e767bb77b}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Lin},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8434169d49d9c872bcc59a68b6bf40c7}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Junhao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fd4cac6eadea1ec816d4c571f5cb1024}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Yunshu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b37c036ec00946927e8d18e6d2aad1fa}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Huimin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=081d7c6987625d65e00837ccca872b05}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Zongtan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=60fc862ff381f52a0c11da6d1df2c1ee}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Chunbaixue},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{d03bd8fd8856505829e591afbf7407b5}
+      \strng{fullhash}{35dcb1971329f331be30c5ccd1a5e362}
+      \strng{bibnamehash}{d03bd8fd8856505829e591afbf7407b5}
+      \strng{authorbibnamehash}{d03bd8fd8856505829e591afbf7407b5}
+      \strng{authornamehash}{d03bd8fd8856505829e591afbf7407b5}
+      \strng{authorfullhash}{35dcb1971329f331be30c5ccd1a5e362}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-0409}
+      \field{journaltitle}{Journal of Intelligent &amp; Robotic Systems}
+      \field{month}{9}
+      \field{number}{1}
+      \field{title}{Scale Force Control of an Exoskeleton for Human Performance Augmentation}
+      \field{volume}{106}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1007/s10846-022-01611-6
+      \endverb
+    \endentry
+    \entry{AlTashi2024}{article}{}
+      \name{author}{4}{}{%
+        {{hash=e8caf28dd0d892b5ceb16cd6736f1447}{%
+           family={Al-Tashi},
+           familyi={A\bibinithyphendelim T\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3152088dd3b6312c45d463e29ae21ca0}{%
+           family={Lennartson},
+           familyi={L\bibinitperiod},
+           given={Bengt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5ca3520d8a030aaaf143a0bc4c3bc379}{%
+           family={Ortiz-Catalan},
+           familyi={O\bibinithyphendelim C\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=14b66f7a9cbc720344b525cc732f4f80}{%
+           family={Just},
+           familyi={J\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter GmbH}%
+      }
+      \strng{namehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{fullhash}{16f9473b19245082966634ae84f8b836}
+      \strng{bibnamehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{authorbibnamehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{authornamehash}{ff82d5f5a4f10774984a2ed932e8cc31}
+      \strng{authorfullhash}{16f9473b19245082966634ae84f8b836}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2196-677X}
+      \field{journaltitle}{at - Automatisierungstechnik}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Classroom-ready open-source educational exoskeleton for biomedical and control engineering}
+      \field{volume}{72}
+      \field{year}{2024}
+      \field{pages}{460\bibrangedash 475}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1515/auto-2023-0208
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

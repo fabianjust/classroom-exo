@@ -1,0 +1,41 @@
+\documentclass[]{article}
+
+%=========================
+%      Includes
+%=========================
+\input{etc/packages}
+\input{etc/abbreviations}
+\input{etc/listingsstyle} % colorful listings (source code)
+\input{etc/stlye}
+\input{etc/arduinoLanguage}
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{etc/literature.bib}
+
+\title{Laboration: EMG-control of The Classroom Exo}
+
+\titlepic{\includegraphics{img/fig_01}}
+
+\author{Linn Hellberg, Sushanthika Gnanasekaran, and Amanda Hoveklint}
+\date{DD.MM.YYY}
+
+\globalcounter{figure}
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle \newpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+\newpage
+
+
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\include{frontmatter/text}
+\newpage
+\input{frontmatter/abbreviations} 
+\printbibliography
+\end{document}

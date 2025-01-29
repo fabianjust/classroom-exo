@@ -1,0 +1,121 @@
+%===============================
+%HH.se
+%
+
+\usepackage[english]{babel}
+
+\usepackage{mathtools} % loads amsmath
+%multi-row
+\usepackage{multirow}
+
+% Hyperlinks
+\usepackage[bookmarks,bookmarksnumbered=true,hidelinks,pdfhighlight=/O]{hyperref}
+
+% Make listings colorful later in listingsstyle.tex
+\usepackage{listings}
+\usepackage[table]{xcolor}
+
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+%\usepackage[obeyspaces]{url}
+
+%Todos - disable by setting "final" in documentclass!
+\setlength {\marginparwidth }{2cm} 
+\usepackage[obeyFinal]{todonotes}
+
+%Abkürzungen
+\usepackage[acronym]{glossaries}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\setlength\glsdescwidth{0.9\hsize}
+
+%\makeglossaries
+\makenoidxglossaries
+\setglossarystyle{long}
+
+\usepackage{cleveref} % \cref is better than \ref
+
+
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+%\usepackage[obeyspaces]{url}
+\usetikzlibrary{automata, positioning, arrows}
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[numbered]{matlab-prettifier}
+%matlab style
+\lstdefinestyle{matlabstyle}{
+	language=Matlab,
+	frame=single,
+	backgroundcolor=\color{lightgray!10},
+	rulecolor=\color{lightgray!40},
+	breaklines=true,
+	%  xleftmargin=\parindent,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{black!70!purple},
+	commentstyle=\itshape\color{green!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{11} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{11}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+% Title Page 
+% same template as i nthe book from Auxivo!
+\usepackage[Lenny]{fncychap}
+% Python style
+\newcommand\pythonstyle{\lstset{
+		language=Python,
+		basicstyle=\ttm,
+		morekeywords={self},              % Add keywords here
+		keywordstyle=\ttb\color{deepblue},
+		emph={MyClass,__init__},          % Custom highlighting
+		emphstyle=\ttb\color{deepred},    % Custom highlighting style
+		stringstyle=\color{deepgreen},
+		frame=tb,                         % Any extra options here
+		showstringspaces=false
+}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+	\pythonstyle
+	\lstset{#1}
+}
+{}
+
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\usepackage{subcaption}
+
+\urlstyle{same}
+
+% Images and subfigures
+% Always try to include eps of pdf for scalable images and searchable text...
+\usepackage{graphicx} % \includegraphics
+\usepackage{float} % for alignment [H]
+\usepackage{wrapfig} % Including figures which text can flow around
+\usepackage{paracol}
+\usepackage{caption}
+\usepackage[labelfont=bf,textfont=it,singlelinecheck=off,justification=centering]{caption} % left/centering/raggedright
+\usepackage[justification=centering]{subcaption} % for caption a) b)... on subfigures
+\usepackage{titlepic}
+
+
+\usepackage[page]{appendix} % Anhang
+\usepackage{pdfpages} % \includepdf for appendices
+\usepackage{makecell} % for line breaks in tables, nicer formatting
